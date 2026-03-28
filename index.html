@@ -38,8 +38,8 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 .subscribe-box h3{font-size:17px;margin-bottom:8px}
 .subscribe-box p{font-size:13px;color:#9CA3AF;margin-bottom:16px}
 .subscribe-form input{width:100%;padding:14px 16px;border-radius:14px;border:none;background:#1f2937;color:#fff;font-size:15px;margin-bottom:14px;outline:none;user-select:text}
-.subscribe-form button{width:100%;padding:14px;border-radius:14px;background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;font-weight:700;border:none;cursor:pointer}
-.close-sub{margin-top:16px;font-size:13px;color:#6B7280;cursor-pointer;padding:8px}
+.subscribe-form button{width:100%;padding:14px;border-radius:14px;background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;font-weight:700;border:none;cursor-pointer}
+.close-sub{margin-top:16px;font-size:13px;color:#6B7280;cursor-padding:8px}
 
 .top-nav{display:flex;justify-content:center;gap:8px;padding:12px 8px;background:#111827;border-bottom:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;position:sticky;top:0;z-index:100}
 .nav-btn{background:#1f2937;color:#fff;border:none;padding:12px 10px;border-radius:14px;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s;min-width:90px;text-align:center}
@@ -97,7 +97,7 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 .pwa-box{background:#111827;width:100%;max-width:360px;border-radius:18px;padding:24px 20px;text-align:center}
 .dramtv-icon{width:90px;height:90px;border-radius:50%;background:#E63946;color:#fff;font-size:24px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .pwa-desc{font-size:13px;color:#d1d5db;margin:8px 0;line-height:1.5}
-.close-pwa{margin-top:16px;font-size:13px;color:#9CA3AF;cursor-pointer;padding:8px}
+.close-pwa{margin-top:16px;font-size:13px;color:#9CA3AF;cursor-padding:8px}
 
 .back-to-top{position:fixed;bottom:20px;right:16px;width:44px;height:44px;border-radius:50%;background:#E63946;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s ease;z-index:999}
 .back-to-top.show{opacity:1;pointer-events:all}
@@ -149,74 +149,80 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 
 <div class="container">
 
-<!-- ======================
-轮播图 独立拆分 可直接替换
-======================= -->
 <div class="slider" id="slider">
   <div class="slider-wrapper">
 
+
     <!-- 轮播 1 -->
     <div class="slide">
-      <a href="CPS-LINK-1">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328hs0bNYcW8I">
         <img class="slide-img" src="https://i.imgur.com/O3EdH9K.jpeg" loading="lazy">
       </a>
       <div class="slide-info">
         <h3 class="slide-title">[พากย์ไทย]รักที่ถูกบีบคั้นจนเสียใจ</h3>
-        <p class="slide-desc">ซ่งชิงหรูต้องทนทุกข์จากการถูกจางเป่ยถิงผู้เป็นสามีหมางเมิน และถูกจ้าวอวี้หวนเลขาสาวเข้ามาเป็นมือที่สาม จนกระทั่งถูกบีบคั้นให้บริจาคไต นั่นทำให้เธอตาสว่างเห็นธาตุแท้ของพวกเขา เธอจึงตัดสินใจหย่าขาดและเปลี่ยนชื่อเป็น 'จูลี่' ผันตัวไปเป็นผู้สื่อข่าวสนามรบระดับโลกจนคว้ารางวัลใหญ่มาครอง ในงานเลี้ยงฉลองความสำเร็จ เธอเปิดโปงแผนชั่ว และตัดขาดกับจางเป่ยถิงอย่างถาวร ส่วนซูได้เป็นผู้เปิดเผยตัวตนที่แท้จริงของเธอ พร้อมกับมอบรางวัลสูงสุดแห่งวงการข่าวเพื่อเชิดชูเกียรติแก่เธอ</p>
+        <p class="slide-desc">หลังถูกสามีและมือที่สามบีบคั้นให้บริจาคไต ซ่งชิงหรูหย่าเปลี่ยนชื่อเป็นจูลี่ กลายเป็นนักข่าวสนามรบระดับโลก เปิดโปงความชั่วช้าและคว้ารางวัลสูงสุด</p>
         <a class="slide-btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328hs0bNYcW8I">Watch Now →</a>
       </div>
     </div>
+    <!-- 轮播 1 结束 -->
+
 
     <!-- 轮播 2 -->
     <div class="slide">
-      <a href="CPS-LINK-2">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328jX3T8zLIQf">
         <img class="slide-img" src="https://i.imgur.com/yVA1aTv.jpeg" loading="lazy">
       </a>
       <div class="slide-info">
         <h3 class="slide-title">[พากย์ไทย]ทางกลับของราชา</h3>
-        <p class="slide-desc">หลังจากซูว่านฉิงหย่ากับสามี ลู่เฉิงโจว เพราะเขานอกใจไปคบกับซูเหยา เธอจึงเปิดเผยความจริงว่าตนเองคือผู้สร้างสรรค์เพลงทั้งหมด และขอคืนลิขสิทธิ์จนทำให้อาชีพของลู่เฉิงโจวพังทลาย ซูเหยาทำร้ายคนอื่นจนถูกจับกุม ต่อมาซูว่านฉิงเซ็นสัญญากับสตาร์ไลท์มีเดีย คว้ารางวัลนักแต่งเพลงยอดเยี่ยม และเริ่มพัฒนาความสัมพันธ์ครั้งใหม่กับโจวชูไป่ ขณะเดียวกันก็ต้องรับมือกับปัญหาทั้งในครอบครัวและการงาน ก่อนจะก้าวสู่ชีวิตใหม่อย่างมั่นคงในท้ายที่สุด.</p>
+        <p class="slide-desc">หลังหย่าสามีที่นอกใจ ซูว่านฉิงเปิดเผยว่าเป็นผู้แต่งเพลงจริง ทำลายอาชีพเขา คว้ารางวัลและเริ่มชีวิตใหม่กับโจวชูไป่อย่างมั่นคง</p>
         <a class="slide-btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328jX3T8zLIQf">Watch Now →</a>
       </div>
     </div>
+    <!-- 轮播 2 结束 -->
+
 
     <!-- 轮播 3 -->
     <div class="slide">
-      <a href="CPS-LINK-3">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328nd6pdydfDf">
         <img class="slide-img" src="https://i.imgur.com/KYaRAL5.jpeg" loading="lazy">
       </a>
       <div class="slide-info">
         <h3 class="slide-title">[พากย์ไทย]สร้อยข้อมือทดสอบ</h3>
-        <p class="slide-desc">สเตลล่าถูกแม่ทำร้ายจนเสียชีวิตแล้วกลับชาติมาเกิดเป็นเกรซ, เธอได้พบกับความอบอุ่นในครอบครัวใหม่. ครอบครัวเดิมของเธอแย่ลงหลังจากเธอเสียชีวิต เกรซได้ช่วยครอบครัวใหม่ให้หลุดพ้นจากความเจ็บปวด, เธอเองก็ได้รับอิสรภาพและความสุขที่แท้จริง..</p>
+        <p class="slide-desc">สเตลล่าถูกแม่ทำร้ายเสียชีวิตกลับชาติมาเป็นเกรซ พบครอบครัวอุ่นอบอุ่น ช่วยเหลือพวกเขาและได้ความสุขแท้จริงในชีวิตใหม่</p>
         <a class="slide-btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328nd6pdydfDf">Watch Now →</a>
       </div>
     </div>
+    <!-- 轮播 3 结束 -->
+
 
     <!-- 轮播 4 -->
     <div class="slide">
-      <a href="CPS-LINK-4">
+      <a href="https://eng.moboreels.com/S5jbA/696275">
         <img class="slide-img" src="https://i.imgur.com/JI3mO5D.jpeg" loading="lazy">
       </a>
       <div class="slide-info">
         <h3 class="slide-title">หันหลังให้ความทรยศ</h3>
-        <p class="slide-desc">ในชาติก่อน เฉียวซินเหยียนทุ่มเทแรงกายแรงใจเพื่อพ่อและพี่ชายสามคนของเธอ แต่หลังจากที่ครอบครัวรุ่งเรืองตามที่เธอคาดหวังแล้ว เธอกลับถูกพี่สาวที่จู่ๆ ก็กลับบ้านมาแย่งความรักจากพ่อและพี่ชายไป เมื่อเธอลืมตาอีกครั้ง เฉียวซินเหยียนกลับย้อนเวลาไปยังช่วงเวลาที่พ่อแม่เพิ่งหย่าร้างกัน ในชาตินี้ เธอตัดสินใจอย่างแน่วแน่ที่จะละทิ้งพ่อและพี่ชายที่ไม่เห็นคุณค่าในตัวเธอ และติดตามแม่ที่แต่งงานใหม่เข้าสู่บ้านตระกูลเศรษฐีที่มีชื่อเสียงแทน....</p>
+        <p class="slide-desc">เฉียวซินเหยียนทุ่มเทชีวิตให้ครอบครัวแต่ถูกแย่งรัก กลับชาติใหม่จึงตัดสินใจละทิ้งพ่อและพี่ชาย ตามแม่เข้าสู่ตระกูลเศรษฐี</p>
         <a class="slide-btn" href="https://eng.moboreels.com/S5jbA/696275">Watch Now →</a>
       </div>
     </div>
+    <!-- 轮播 4 结束 -->
+
 
     <!-- 轮播 5 -->
     <div class="slide">
-      <a href="CPS-LINK-5">
+      <a href="https://eng.moboreels.com/S2Q5E/696276">
         <img class="slide-img" src="https://i.imgur.com/3ryx3tQ.jpeg" loading="lazy">
       </a>
       <div class="slide-info">
         <h3 class="slide-title">รักข้ามภพ</h3>
-        <p class="slide-desc">นางเอกละครสั้น เหอเจี๋ยวเจี่ยวบังเอิญทะลุมิติเข้าสู่โลกละครที่เธอเคยรับบท พอเข้าไปปุ๊บ ก็ตายปั๊บ ทำไมคนอื่นเขาพอทะลุมิติแล้วจะมีแต่โดนเอาใจสารพัดอย่าง แต่พอถึงตาเธอแล้วกลับโดนฆ่าไม่หยุดไม่เลิกสักที เหอเจี๊ยวเจี่ยวโกรธมาก ไหนคุณหนูตัวปลอมใช่ไหม เพียะ！แม่แท้ๆที่ทั้งตาบอดใจบอดใช่ไหม เพียะ！ยังมีพระเอกที่ช่างน่ารังเกียจและรู้จักแต่ทำร้ายคนอื่นใช่ไหม เพียะๆๆๆ！เดี๋ยวก่อน คนเดินผ่านที่ทั้งหล่อทั้งสูงทั้งอ่อนยอนคนนั้นโผล่มาจากไหนกัน？ช่างมัน ขอเก็บเอาไว้แล้วกัน ฮ่าๆๆ ถ้าจะเข้าสู่ในโลกที่บ้าไปแล้ว งั้นเธอก็จะยิ่งบ้ากว่านั้น เธอไม่ยอมใครหรอกนะ！.</p>
+        <p class="slide-desc">เหอเจี๋ยวเจี่ยวทะลุมิติเข้าสู่โลกละครแต่โดนฆ่าซ้ำๆ จึงตัดสินใจบ้ากว่าใคร พร้อมพบพระเอกหล่อสูงและต่อสู้ชีวิตอย่างสุดซึ้ง</p>
         <a class="slide-btn" href="https://eng.moboreels.com/S2Q5E/696276">Watch Now →</a>
       </div>
     </div>
+    <!-- 轮播 5 结束 -->
 
   </div>
-
   <div class="slider-dots">
     <div class="dot active" onclick="goTo(0)"></div>
     <div class="dot" onclick="goTo(1)"></div>
@@ -225,8 +231,6 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
     <div class="dot" onclick="goTo(4)"></div>
   </div>
 </div>
-<!-- 轮播结束 -->
-
 
 <div class="header">
   <h1>Hot Short Dramas • Official</h1>
@@ -243,374 +247,429 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 
 <h2 class="section-title">Recent Hot • ล่าสุดฮิต</h2>
 
-<!-- ======================
-卡片列表 每一张完全独立拆开
-======================= -->
 <div class="grid">
 
-<!-- 卡片 1 -->
-<div class="card">
-  <a href="CPS-LINK-1">
-    <img src="https://picsum.photos/720/960?1" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>My Secret Billionaire Husband</h3>
-    <p class="desc">Poor girl marries a secret tycoon.</p>
-    <a class="btn" href="CPS-LINK-1">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 2 -->
-<div class="card">
-  <a href="CPS-LINK-2">
-    <img src="https://picsum.photos/720/960?2" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Revenge After Divorce</h3>
-    <p class="desc">She returns strong and gets revenge.</p>
-    <a class="btn" href="CPS-LINK-2">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 1 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/S2Q5E/696276">
+        <img src="https://i.imgur.com/dpUsZ1t.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>รักข้ามภพ</h3>
+        <p class="desc">เหอเจี๋ยวเจี่ยวทะลุมิติเข้าสู่โลกละครแต่โดนฆ่าซ้ำเรื่อยๆ จึงตัดสินใจบ้ากว่าใคร ปะทะคุณหนูปลอมและพบชายหล่อสูงอ่อนโยนต่อสู้ชีวิต</p>
+        <a class="btn" href="https://eng.moboreels.com/S2Q5E/696276">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 1 结束 -->
 
-<!-- 卡片 3 -->
-<div class="card">
-  <a href="CPS-LINK-3">
-    <img src="https://picsum.photos/720/960?3" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Love With The Boss</h3>
-    <p class="desc">Romance with a billionaire boss.</p>
-    <a class="btn" href="CPS-LINK-3">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 4 -->
-<div class="card">
-  <a href="CPS-LINK-4">
-    <img src="https://picsum.photos/720/960?4" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Secret Heir</h3>
-    <p class="desc">The hidden heir of a big family.</p>
-    <a class="btn" href="CPS-LINK-4">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 2 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/ed2ekmok">
+        <img src="https://i.imgur.com/N0xjchw.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>เมื่อฉันรู้อนาคต</h3>
+        <p class="desc">เฉินฮั่นเซิงกลับชาติถึงปี 2002 ใช้ความรู้อนาคตสร้างอีคอมเมิร์ซและธุรกิจสำเร็จ ต้องตัดสินใจรักระหว่างเสิ่นยู่ฉู่กับเซียวหรงอวี๋</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/ed2ekmok">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 2 结束 -->
 
-<!-- 卡片 5 -->
-<div class="card">
-  <a href="CPS-LINK-5">
-    <img src="https://picsum.photos/720/960?5" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Eternal Love</h3>
-    <p class="desc">Enduring love forever.</p>
-    <a class="btn" href="CPS-LINK-5">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 6 -->
-<div class="card">
-  <a href="CPS-LINK-6">
-    <img src="https://picsum.photos/720/960?6" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Cold Boss</h3>
-    <p class="desc">A cold boss but deeply loves you.</p>
-    <a class="btn" href="CPS-LINK-6">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 3 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/8zuzadko">
+        <img src="https://i.imgur.com/R4ful5x.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ซ่อนรักในคราบช่าง</h3>
+        <p class="desc">เฉิงวั่งซูสูญเสียพ่อแม่ถูกแย่งโควตาและคู่หมั้น เหลือแต่แต่งงานกับช่างซ่อมที่เป็นเศรษฐีลับ ร่วมกันสืบความจริงและกลายเป็นนักออกแบบสวยงาม</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/8zuzadko">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 3 结束 -->
 
-<!-- 卡片 7 -->
-<div class="card">
-  <a href="CPS-LINK-7">
-    <img src="https://picsum.photos/720/960?7" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Secret Baby</h3>
-    <p class="desc">She has a secret baby with the boss.</p>
-    <a class="btn" href="CPS-LINK-7">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 8 -->
-<div class="card">
-  <a href="CPS-LINK-8">
-    <img src="https://picsum.photos/720/960?8" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Mafia Love</h3>
-    <p class="desc">Loving the mafia leader.</p>
-    <a class="btn" href="CPS-LINK-8">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 4 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/5xdczptc">
+        <img src="https://i.imgur.com/XzKVAum.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>หมากที่ถูกทิ้ง พลิกกระดานฟ้า</h3>
+        <p class="desc">โจวหมิงเจ๋อบุตรแท้ถูกแคลนทารุณจนเสียชีวิต เกิดใหม่เป็นคุณชายตระกูลหนิง ภูมิภาคเจียงเฉิง พร้อมแค้นแก้แค้นตระกูลโจวอย่างสิ้นหวัง</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/5xdczptc">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 4 结束 -->
 
-<!-- 卡片 9 -->
-<div class="card">
-  <a href="CPS-LINK-9">
-    <img src="https://picsum.photos/720/960?9" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Fake Marriage</h3>
-    <p class="desc">Fake marriage becomes true love.</p>
-    <a class="btn" href="CPS-LINK-9">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 10 -->
-<div class="card">
-  <a href="CPS-LINK-10">
-    <img src="https://picsum.photos/720/960?10" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>One Night Secret</h3>
-    <p class="desc">One night changes everything.</p>
-    <a class="btn" href="CPS-LINK-10">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 5 -->
+    <div class="card">
+      <a href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK">
+        <img src="https://i.imgur.com/LVW0WD6.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>เกิดใหม่ 1988: สาวอ้วนพลิกชีวิตพิชิตใจนายทหาร</h3>
+        <p class="desc">เจียงหลีหลีย้อนเวลากลับปี1988เป็นสาวอ้วนแต่แต่งงานกับพี่ชายทหาร ปกป้องกันไว้ พร้อมพบหนุ่มย้อนเวลาจาก2024 ปล้นความรักและความรวยไปด้วยกัน</p>
+        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 5 结束 -->
 
-<!-- 卡片 11 -->
-<div class="card">
-  <a href="CPS-LINK-11">
-    <img src="https://picsum.photos/720/960?11" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Love At First Sight</h3>
-    <p class="desc">Unexpected love at first sight.</p>
-    <a class="btn" href="CPS-LINK-11">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 12 -->
-<div class="card">
-  <a href="CPS-LINK-12">
-    <img src="https://picsum.photos/720/960?12" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Billionaire Playboy</h3>
-    <p class="desc">A playboy falls in true love.</p>
-    <a class="btn" href="CPS-LINK-12">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 6 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/932nf5ol">
+        <img src="https://i.imgur.com/i7qU5UQ.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>[พากย์เสียง] เอาชีวิตรอดบนเรือด้วยกล่องสุ่ม</h3>
+        <p class="desc">วันสิ้นโลกมาถึง ฝูงซอมบี้กวาดล้างโลก เฉินโม่และเพื่อนติดอยู่บนเรือลำใหญ่ ต้องสุ่มกล่องปริศนาจากตู้คอนเทนเนอร์เพื่อเอาชีวิตรอดอย่างสุดขีด</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/932nf5ol">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 6 结束 -->
 
-<!-- 卡片 13 -->
-<div class="card">
-  <a href="CPS-LINK-13">
-    <img src="https://picsum.photos/720/960?13" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Young Mom Success</h3>
-    <p class="desc">Young mom returns successfully.</p>
-    <a class="btn" href="CPS-LINK-13">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 14 -->
-<div class="card">
-  <a href="CPS-LINK-14">
-    <img src="https://picsum.photos/720/960?14" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Secret Husband</h3>
-    <p class="desc">Hiding a rich husband.</p>
-    <a class="btn" href="CPS-LINK-14">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 7 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/868u1wjf">
+        <img src="https://i.imgur.com/2fARhMR.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ซูเปอร์มาร์เก็ตวันสิ้นโลก</h3>
+        <p class="desc">เด็กหนุ่มถูกไล่ออกจากครอบครัว เปิดซุปเปอร์มาร์เก็ตในวันสิ้นโลก จ้างตัวอาถรรพ์เป็นพนักงาน ค้าขายเพื่ออัปเกรดร้าน และพลิกชะตากลายเป็นผู้กอบกู้โลก</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/868u1wjf">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 7 结束 -->
 
-<!-- 卡片 15 -->
-<div class="card">
-  <a href="CPS-LINK-15">
-    <img src="https://picsum.photos/720/960?15" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Divorced Return</h3>
-    <p class="desc">Divorced and returns stronger.</p>
-    <a class="btn" href="CPS-LINK-15">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 16 -->
-<div class="card">
-  <a href="CPS-LINK-16">
-    <img src="https://picsum.photos/720/960?16" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Hidden Love</h3>
-    <p class="desc">Love too afraid to speak.</p>
-    <a class="btn" href="CPS-LINK-16">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 8 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/ido415qx">
+        <img src="https://i.imgur.com/Y0pCmqB.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>หงส์พิฆาตบัลลังก์</h3>
+        <p class="desc">ซ่างกวนเยว่พระธิดาซ่อนตัวเป็นภรรยากรุณา แต่ถูกสามีทรยศ เมื่อถูกเปิดตัวเป็นฮ่องเต้ฯ เธอจึงลงโทษคนชั่วและขึ้นครองบัลลังก์อย่างเกรียงไกร</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/ido415qx">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 8 结束 -->
 
-<!-- 卡片 17 -->
-<div class="card">
-  <a href="CPS-LINK-17">
-    <img src="https://picsum.photos/720/960?17" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Kind Boss</h3>
-    <p class="desc">Boss truly loves you deeply.</p>
-    <a class="btn" href="CPS-LINK-17">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 18 -->
-<div class="card">
-  <a href="CPS-LINK-18">
-    <img src="https://picsum.photos/720/960?18" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Boyfriend Is Rich</h3>
-    <p class="desc">Secret boyfriend is a tycoon.</p>
-    <a class="btn" href="CPS-LINK-18">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 9 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/1ik4qwhf">
+        <img src="https://i.imgur.com/GVim5k7.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>จากสัญญาสู่รักนิรันดร์</h3>
+        <p class="desc">เจี่ยนฉิงเข้าใจผิดว่าอวี้โม่ถิงคือศัตรู จึงแต่งงานฉดๆ กัน เขาปกป้องเธอเงียบๆ มา11ปี คลี่คลายความเข้าใจผิดและก่อตัวเป็นความรักแท้</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/1ik4qwhf">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 9 结束 -->
 
-<!-- 卡片 19 -->
-<div class="card">
-  <a href="CPS-LINK-19">
-    <img src="https://picsum.photos/720/960?19" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Secret Admirer</h3>
-    <p class="desc">Someone secretly loves you.</p>
-    <a class="btn" href="CPS-LINK-19">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 20 -->
-<div class="card">
-  <a href="CPS-LINK-20">
-    <img src="https://picsum.photos/720/960?20" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Cross World Love</h3>
-    <p class="desc">Love across boundaries.</p>
-    <a class="btn" href="CPS-LINK-20">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 10 -->
+    <div class="card">
+      <a href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ">
+        <img src="https://i.imgur.com/rPh0EML.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ลดขั้นข้าเป็นอนุหรือ ข้าขอเตะส่งสามีสารเลว</h3>
+        <p class="desc">จูเมิ่งซีถูกชายรักและพี่สาวหลอกใช้จนตาย คืนชีพกลับย้อนเวลา พร้อมแค้นแก้แค้นคนชั่วอย่างสิ้นหวัง</p>
+        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 10 结束 -->
 
-<!-- 卡片 21 -->
-<div class="card">
-  <a href="CPS-LINK-21">
-    <img src="https://picsum.photos/720/960?21" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Hidden Princess</h3>
-    <p class="desc">She is a hidden princess.</p>
-    <a class="btn" href="CPS-LINK-21">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 22 -->
-<div class="card">
-  <a href="CPS-LINK-22">
-    <img src="https://picsum.photos/720/960?22" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>True Love</h3>
-    <p class="desc">The love I truly want.</p>
-    <a class="btn" href="CPS-LINK-22">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 11 -->
+    <div class="card">
+      <a href="https://dramabox.onelink.me/dqUm/wfn8yt7f">
+        <img src="https://i.imgur.com/seVGxmz.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>รักในวันที่สายไป(พากย์ไทย)</h3>
+        <p class="desc">คิมอูจินทุ่มเทรักและละทิ้งฝันเพื่ออิมอึนจู แต่หัวใจเขาเป็นของรักแรก จึงขอหย่าและผลักดันคู่รักเดิม ก่อนเดินทางตามฝันของตัวเอง</p>
+        <a class="btn" href="https://dramabox.onelink.me/dqUm/wfn8yt7f">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 11 结束 -->
 
-<!-- 卡片 23 -->
-<div class="card">
-  <a href="CPS-LINK-23">
-    <img src="https://picsum.photos/720/960?23" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Secret Young Master</h3>
-    <p class="desc">Young master with secrets.</p>
-    <a class="btn" href="CPS-LINK-23">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 24 -->
-<div class="card">
-  <a href="CPS-LINK-24">
-    <img src="https://picsum.photos/720/960?24" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Full Revenge</h3>
-    <p class="desc">Revenge to the fullest.</p>
-    <a class="btn" href="CPS-LINK-24">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 12 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/RFKNY/696396">
+        <img src="https://i.imgur.com/4uDiVGG.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>เจ้าเป็นจอหงวน ข้าเป็นฮองเฮา</h3>
+        <p class="desc">ซ่งจือเซี่ยถูกรักแรกทิ้งจึงแต่งงานกับขอทาน ไม่รู้ว่าผู้ชายที่แต่งงานด้วยก็คือฮ่องเต้ที่ปลอมตัว</p>
+        <a class="btn" href="https://eng.moboreels.com/RFKNY/696396">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 12 结束 -->
 
-<!-- 卡片 25 -->
-<div class="card">
-  <a href="CPS-LINK-25">
-    <img src="https://picsum.photos/720/960?25" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Unforgettable Love</h3>
-    <p class="desc">Love still in my heart.</p>
-    <a class="btn" href="CPS-LINK-25">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 26 -->
-<div class="card">
-  <a href="CPS-LINK-26">
-    <img src="https://picsum.photos/720/960?26" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Secret Girl</h3>
-    <p class="desc">She has a big secret.</p>
-    <a class="btn" href="CPS-LINK-26">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 13 -->
+    <div class="card">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry">
+        <img src="https://i.imgur.com/tmyiVfK.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>จากนักโทษ สู่มหาอำนาจ</h3>
+        <p class="desc">เย่เจิ้งหยางพ้นโทษออกจากคุก เปิดเผยความจริงรับโทษแทน คลี่คลายวิกฤตตระกูล และทำลายแผนร้ายของศัตรูทั้งหลาย</p>
+        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 13 结束 -->
 
-<!-- 卡片 27 -->
-<div class="card">
-  <a href="CPS-LINK-27">
-    <img src="https://picsum.photos/720/960?27" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>He Loves Me</h3>
-    <p class="desc">He already loves you.</p>
-    <a class="btn" href="CPS-LINK-27">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 28 -->
-<div class="card">
-  <a href="CPS-LINK-28">
-    <img src="https://picsum.photos/720/960?28" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Heart Is Yours</h3>
-    <p class="desc">My heart is forever yours.</p>
-    <a class="btn" href="CPS-LINK-28">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 14 -->
+    <div class="card">
+      <a href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6">
+        <img src="https://i.imgur.com/gLzOy69.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ชีวิตใหม่ของข้าในวังโบราณ</h3>
+        <p class="desc">เซิ่งหยูนหลานแพทย์สมัยใหม่ข้ามเวลาสู่โบราณ ถูกขายไปบ้านลี่ ใช้ฝีมือรักษาโรคช่วยเหลือผู้คนอย่างสุดซึ้ง</p>
+        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 14 结束 -->
 
-<!-- 卡片 29 -->
-<div class="card">
-  <a href="CPS-LINK-29">
-    <img src="https://picsum.photos/720/960?29" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Billionaire Loves Me</h3>
-    <p class="desc">Rich man loves ordinary girl.</p>
-    <a class="btn" href="CPS-LINK-29">Watch Now</a>
-  </div>
-</div>
 
-<!-- 卡片 30 -->
-<div class="card">
-  <a href="CPS-LINK-30">
-    <img src="https://picsum.photos/720/960?30" loading="lazy">
-  </a>
-  <div class="info">
-    <h3>Warm Love Story</h3>
-    <p class="desc">Warm and touching love story.</p>
-    <a class="btn" href="CPS-LINK-30">Watch Now</a>
-  </div>
-</div>
+    <!-- 卡片 15 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/RbGwO/696403">
+        <img src="https://i.imgur.com/yZlopdN.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>องค์ชายอย่ามายุ่งกับอาสะใภ้</h3>
+        <p class="desc">เสิ่นเย่ากลับชาติหลังทนทุกข์กับรัชทายาท เลือกแต่งงานกับจิ้งอ๋องที่อาการเสื่อมสภาพ แต่เขาฟื้นคืนและรักเธออย่างลึกซึ้ง</p>
+        <a class="btn" href="https://eng.moboreels.com/RbGwO/696403">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 15 结束 -->
+
+
+    <!-- 卡片 16 -->
+    <div class="card">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO">
+        <img src="https://i.imgur.com/EvUjlLN.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ศรัทธาของหมอ</h3>
+        <p class="desc">หลินเจิ้งเต๋อแพทย์อัจฉริยะปฏิเสธสิ่งล่อใจ ถูกดึงเข้าวิวาตระกูลและกลุ่มอันตราย ช่วยเหลือผู้ตกทุกข์และต่อสู้เพื่อความยุติธรรม</p>
+        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 16 结束 -->
+
+
+    <!-- 卡片 17 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/KuAjE/696405">
+        <img src="https://i.imgur.com/cqzpVn7.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>หลังโด่งดัง ครอบครัวขอให้ยกอภัย</h3>
+        <p class="desc">เยียนหลายอี้ลูกนอกสมรสถูกครอบครัวปฏิเสธเพราะแม่ กลายเป็นดาวพระชนมายุได้ผู้คนรัก คบกับกู้ฮวายและตัดสินใจออกไปอยู่เอง แต่ครอบครัวกลับไม่ยอมปล่อยเธอ</p>
+        <a class="btn" href="https://eng.moboreels.com/KuAjE/696405">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 17 结束 -->
+
+
+    <!-- 卡片 18 -->
+    <div class="card">
+      <a href="https://short.rollershort.com/api/short/jump/69c7636c1cc58">
+        <img src="https://i.imgur.com/wUIwi1S.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>(พากย์เสียง)ภารกิจกลับโลกฮูหยิน</h3>
+        <p class="desc">เฉินอวี้หู นศ.สาวทะลุมิติมาเป็นฮูหยินจวนโหวผู้แสนอาภัพ นางตั้งเป้าต้องแก่ตายเท่านั้นจึงจะได้กลับโลกเ...</p>
+        <a class="btn" href="https://short.rollershort.com/api/short/jump/69c7636c1cc58">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 18 结束 -->
+
+
+    <!-- 卡片 19 -->
+    <div class="card">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq">
+        <img src="https://i.imgur.com/D78hUdQ.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>คุณหนูตัวร้าย ทวงชะตาพันล้าน</h3>
+        <p class="desc">ซูหลิงอวิ๋นกลับตระกูลต้องเผชิญขัดแย้งกับซูเสวี่ยโหรว ใช้สติปัญญาเอาตัวรอด เปิดเผยความจริง จับกุมคนชั่วและได้รับครอบครัวคืนมา</p>
+        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 19 结束 -->
+
+
+    <!-- 卡片 20 -->
+    <div class="card">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA">
+        <img src="https://i.imgur.com/e6IVGA8.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>[พากย์ไทย] กลับมาพบรัก</h3>
+        <p class="desc">สองคนที่รักกันถูกแยกจากกัน แล้วเหนื่อยหนักผ่านทุกความท้าทาย เพื่อได้กลับมาเป็นคู่กันอีกครั้ง</p>
+        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 20 结束 -->
+
+
+    <!-- 卡片 21 -->
+    <div class="card">
+      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw">
+        <img src="https://i.imgur.com/21Wrrr0.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>อลเวงวุ่นวายรัก</h3>
+        <p class="desc">เมิ่งหยาหลินและเจียงไป่เสวียนแต่งงานซ่อนตัวตน ต้องเผชิญกับปัญหาแย่งอำนาจและการลักพาตัว เพื่อพิสูจน์ตัวเองในสังคมชั้นสูง</p>
+        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 21 结束 -->
+
+
+    <!-- 卡片 22 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/OHXzw/696413">
+        <img src="https://i.imgur.com/mrLkm4u.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>เกิดใหม่ก่อนแต่งงาน เธอทั้งสวยทั้งแซ่บ</h3>
+        <p class="desc">เย่หนานชีเกิดใหม่หลังถูกทรยศฆาตกรรม แต่งงานกับมหาเศรษฐีเชียวหลิงเย่ แก้แค้นคนชั่วปกป้องทรัพย์สินและมีชีวิตสุขสันต์ร่วมกัน</p>
+        <a class="btn" href="https://eng.moboreels.com/OHXzw/696413">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 22 结束 -->
+
+
+    <!-- 卡片 23 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/RzgzM/696431">
+        <img src="https://i.imgur.com/dzZROs6.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>เจ้าสาวแต่งแทนคือบรรพบุรุษ</h3>
+        <p class="desc">บรรพบุรุษเจียงฟื้นคืนชีพในร่างลูกหลาน พบสามีอดีตผู้สัตย์ซื่อ ช่วยปราบวุ่นวายทวงอำนาจ และไขปริศนาคำสาปร้อยปีเบื้องหลัง</p>
+        <a class="btn" href="https://eng.moboreels.com/RzgzM/696431">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 23 结束 -->
+
+
+    <!-- 卡片 24 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/ROtVk/696432">
+        <img src="https://i.imgur.com/imUC06q.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ตกหลุมพรางรักเธอ</h3>
+        <p class="desc">เจนถูกทอดทิ้งและเอาเปรียบ จึงหาอีธานคู่หมั้นพี่สาวช่วยเหลือ อีธานมองทะลุแผนและเป็นพันธมิตร ทั้งสองถูกดึงดูดกันเข้ามา</p>
+        <a class="btn" href="https://eng.moboreels.com/ROtVk/696432">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 24 结束 -->
+
+
+    <!-- 卡片 25 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/4805ij5w">
+        <img src="https://i.imgur.com/HqKntQd.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>มรสุมรักในดวงตา</h3>
+        <p class="desc">เธอเห็นซับกระสุนและทนทุกข์จากสามีชั่วฟ้าดินสลาย จึงยื่นขอหย่าหายไป แล้วแต่งงานกับผู้ดีกว่า ไม่กลับใจแม้สามีจะสำนึกผิด</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/4805ij5w">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 25 结束 -->
+
+
+    <!-- 卡片 26 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/xhjmyesg">
+        <img src="https://i.imgur.com/OJZ4r1k.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>[พากย์เสียง] ซ่อนกล้องส่องเมียรัก</h3>
+        <p class="desc">ผมกลับจากงานไกล ปรากฏเมียอยากมีลูกอย่างรวดเร็ว ทำให้ผมรู้สึกระแวง จึงติดกล้องซ่อนและแอบเฝ้าดูเพื่อขุดความลับของเธอ</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/xhjmyesg">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 26 结束 -->
+
+
+    <!-- 卡片 27 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/7v5vtrjl">
+        <img src="https://i.imgur.com/Mf46QCe.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ระบบบังคับรัก มัดใจยัยประธานจอมเย็นชา</h3>
+        <p class="desc">เสิ่นรั่วปิงวีนแตกในออฟฟิศ เฉินเหย่ได้รับระบบสารภาพรักและกำหนดเวลา ใช้พลังช่วยเธอหลุดอันตราย จนเธอตกหลุมรักและเขาทำลายศัตรูได้สำเร็จ</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/7v5vtrjl">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 27 结束 -->
+
+
+    <!-- 卡片 28 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/kqz8wur9">
+        <img src="https://i.imgur.com/fmgC0zs.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ประธานลี่อย่าขยับ ฉันกำลังเอาตัวรอดอยู่</h3>
+        <p class="desc">ลู่หว่านชิงตำรวจสากลเข้าสู่ร่างตัวประกอบนิยาย มีระบบบังคับสะสมอารมณ์เพื่ออยู่รอด จึงเข้าหาประธานอารมณ์รุนแรง ทั้งสองรักกันและต้องเผชิญศัตรูหัวใจ</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/kqz8wur9">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 28 结束 -->
+
+
+    <!-- 卡片 29 -->
+    <div class="card">
+      <a href="https://gslink.onelink.me/QU0Q/k20c2pr0">
+        <img src="https://i.imgur.com/6GOauFK.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>เอาใจภรรยาเก่า</h3>
+        <p class="desc">ผู้จัดการฮั่วสามีแบบอย่างดี ถูกเวินซวีซวีกลับมาพร้อมลูก ทำลายชีวิตสงบ เธอปฏิเสธเขาแต่ลูกคล้ายเขาทำให้เขายอมจำนน</p>
+        <a class="btn" href="https://gslink.onelink.me/QU0Q/k20c2pr0">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 29 结束 -->
+
+
+    <!-- 卡片 30 -->
+    <div class="card">
+      <a href="https://eng.moboreels.com/RYvG8/696442">
+        <img src="https://i.imgur.com/1ogSbLy.jpeg" loading="lazy">
+      </a>
+      <div class="info">
+        <h3>ดาวดวงสุดท้ายในคืนลมใต้</h3>
+        <p class="desc">หลินหว่านซิงเฉยเมยเฝ้าระวังกู้หนานเหยาเพื่อคนรักอดีต ทนทุกข์ทรมานจนหมดหวัง เกิดความรู้สึกขึ้นแต่เธอตัดสินใจจากไปแล้ว</p>
+        <a class="btn" href="https://eng.moboreels.com/RYvG8/696442">Watch Now</a>
+      </div>
+    </div>
+    <!-- 卡片 30 结束 -->
 
 </div>
-<!-- 卡片结束 -->
-
 
 <div class="bottom-brand" style="text-align:center;margin:10px 0">
   <div style="font-size:22px;color:#E63946;font-weight:900">DRAMTV</div>

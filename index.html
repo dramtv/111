@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="description" content="DRAMTV - 1000+ Premium Short Dramas. Free Full Episodes, English, Thai. Best Short Drama Platform.">
@@ -33,27 +32,25 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 .action-btn:hover{background:#E63946;color:#fff}
 .action-btn:hover i{color:#fff}
 
-.subscribe-modal{display:none;position:fixed;inset:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);z-index:99999;align-items:center;justify-content:center;padding:16px}
+.subscribe-modal{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);z-index:99999;align-items:center;justify-content:center;padding:16px}
 .subscribe-box{background:#111827;width:100%;max-width:400px;border-radius:18px;padding:24px 20px;text-align:center}
-.subscribe-box h3{font-size:17px;margin-bottom:8px}
-.subscribe-box p{font-size:13px;color:#9CA3AF;margin-bottom:16px}
+.subscribe-box h3{font-size:20px; color:#E63946; margin-bottom:8px; font-weight:800;}
+.subscribe-box p{font-size:13px;color:#9CA3AF;margin-bottom:16px; line-height:1.6;}
 .subscribe-form input{width:100%;padding:14px 16px;border-radius:14px;border:none;background:#1f2937;color:#fff;font-size:15px;margin-bottom:14px;outline:none;user-select:text}
-.subscribe-form button{width:100%;padding:14px;border-radius:14px;background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;font-weight:700;border:none;cursor-pointer}
-.close-sub{margin-top:16px;font-size:13px;color:#6B7280;cursor-padding:8px}
+.subscribe-form button{width:100%;padding:14px;border-radius:14px;background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;font-weight:700;border:none;cursor:pointer;font-size:15px;}
+.close-sub{margin-top:16px;font-size:13px;color:#6B7280;cursor:pointer}
 
 .top-nav{display:flex;justify-content:center;gap:8px;padding:12px 8px;background:#111827;border-bottom:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;position:sticky;top:0;z-index:100}
 .nav-btn{background:#1f2937;color:#fff;border:none;padding:12px 10px;border-radius:14px;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;transition:.2s;min-width:90px;text-align:center}
 .nav-btn:hover{background:#E63946}
 .nav-btn span{display:block;font-size:10px;color:#ccc;margin-top:2px}
 
-.slider{position:relative;width:100%;border-radius:16px;overflow:hidden;margin-bottom:16px}
+.slider{position:relative;width:100%;border-radius:16px;overflow:hidden;margin-bottom:16px;background:#111827;}
 .slider-wrapper{display:flex;transition:transform .5s ease}
-.slide{min-width:100%}
+.slide{min-width:100%; display:flex; flex-direction:column;}
 .slide-img{width:100%;aspect-ratio:16/6;object-fit:cover;display:block}
-.slide-info{background:#111827;padding:16px 20px}
+.slide-info{padding:16px 20px;flex:1;display:flex;flex-direction:column;}
 .slide-title{font-size:18px;font-weight:700;margin-bottom:8px}
-.slide-desc{font-size:13px;color:#d1d5db;margin-bottom:12px}
-.slide-btn{display:block;background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;text-align:center;padding:12px;border-radius:14px;font-weight:700;text-decoration:none}
 .slider-dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
 .dot{width:10px;height:10px;border-radius:50%;background:#444;cursor:pointer}
 .dot.active{background:#E63946;transform:scale(1.2)}
@@ -68,16 +65,42 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 @media(max-width:768px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}}
 @media(max-width:380px){.grid{grid-template-columns:1fr;gap:10px}}
 
-.card{background:#111827;border-radius:16px;overflow:hidden;transition:.2s;margin:0 auto 12px;width:100%}
-.card:hover{transform:scale(1.02)}
+.card{background:#111827;border-radius:16px;overflow:hidden;transition:.2s;margin:0 auto 12px;width:100%;display:flex;flex-direction:column;}
 .card img{width:100%;aspect-ratio:720/960;object-fit:cover}
-.info{padding:12px}
+.info{padding:12px;flex:1;display:flex;flex-direction:column;}
 .info h3{font-size:14px;font-weight:600;margin-bottom:6px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.desc{font-size:11px;color:#bbb;line-height:1.4;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.btn{background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;text-align:center;padding:10px;border-radius:12px;text-decoration:none;font-size:12px;font-weight:700;display:block}
+
+.desc-wrapper{margin-bottom:12px;flex:1;}
+.desc{font-size:11px;color:#bbb;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;transition:all .3s;}
+.desc.expanded{-webkit-line-clamp:unset;}
+.read-more{font-size:11px;color:#E63946;cursor:pointer;font-weight:700;display:inline-block;margin-top:4px;}
+
+.action-row{display:flex;gap:6px;margin-top:auto;align-items:stretch;}
+.preview-btn{flex:1;background:#1f2937;color:#fff;border:1px solid #374151;border-radius:10px;font-size:11px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;padding:10px 4px;transition:0.2s;}
+.preview-btn:hover{background:#374151;color:#E63946;}
+.binge-btn{flex:2.5;background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;text-align:center;padding:8px 4px;border-radius:10px;text-decoration:none;font-size:12px;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.2;box-shadow:0 4px 10px rgba(230,57,70,0.2);}
+.binge-btn span{font-size:9px;font-weight:400;opacity:0.9;margin-top:2px;}
+
+/* --- 视频诱饵弹窗 (沉浸式 MP4 播放器 UI) --- */
+.video-modal{display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); z-index:999999; align-items:center; justify-content:center; padding:16px; backdrop-filter:blur(5px);}
+.video-box{width:100%; max-width:420px; background:#111827; border-radius:16px; overflow:hidden; position:relative; border:1px solid #374151; box-shadow:0 10px 30px rgba(0,0,0,0.8); display:flex; flex-direction:column;}
+.close-video{position:absolute; top:12px; right:12px; width:32px; height:32px; background:rgba(0,0,0,0.6); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:20px; cursor:pointer; z-index:10; border:1px solid rgba(255,255,255,0.2);}
+#videoContainer{position:relative; width:100%; padding-top:177.77%; background:#000;}
+/* 完美适配 9:16 且无控件 */
+#videoContainer video{position:absolute; top:0; left:0; width:100%; height:100%; border:none; object-fit:cover; cursor:pointer;}
+.modal-cps-action{padding:16px;text-align:center;background:#0A0F1E;border-top:1px solid #1f2937;}
+.modal-cps-btn{display:block;background:linear-gradient(90deg,#E63946,#ff4b5a);color:#fff;padding:16px;border-radius:12px;font-weight:800;text-decoration:none;font-size:15px;animation:pulse 2s infinite; cursor:pointer;}
+@keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.03); box-shadow: 0 0 20px rgba(230,57,70,0.5);} 100% {transform: scale(1);} }
+
+/* 伪加载动效 */
+.fake-loader-overlay{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(10,15,30,0.96);z-index:9999999;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;backdrop-filter:blur(8px);}
+.spinner-ring{width:60px;height:60px;border:4px solid rgba(230,57,70,0.2);border-top-color:#E63946;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px;}
+.loading-text{font-size:18px;font-weight:800;margin-bottom:8px;color:#E63946;}
+.loading-subtext{font-size:13px;color:#9CA3AF;}
+.progress-bar-container{width:220px;height:6px;background:#1f2937;border-radius:3px;margin-top:20px;overflow:hidden;}
+.progress-bar-fill{height:100%;width:0%;background:linear-gradient(90deg,#E63946,#ff4b5a);transition:width 1.5s cubic-bezier(0.4, 0, 0.2, 1);}
 
 .social-bar a,.bottom-contact a,.channel-item{text-decoration:none !important}
-
 .social-bar{display:flex;justify-content:center;gap:12px;margin:20px 0;flex-wrap:wrap}
 .social-bar a{color:#fff;font-size:18px;width:40px;height:40px;border-radius:50%;background:#111827;display:flex;align-items:center;justify-content:center;transition:.2s}
 
@@ -93,7 +116,7 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 .channel-item{display:flex;flex-direction:column;align-items:center;gap:4px;color:#9CA3AF;font-size:11px}
 .channel-icon{width:32px;height:32px;border-radius:50%;background:#111827;display:flex;align-items:center;justify-content:center;font-size:14px}
 
-.pwa-icon-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:9999;align-items:center;justify-content:center;padding:16px}
+.pwa-icon-modal{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);z-index:9999;align-items:center;justify-content:center;padding:16px}
 .pwa-box{background:#111827;width:100%;max-width:360px;border-radius:18px;padding:24px 20px;text-align:center}
 .dramtv-icon{width:90px;height:90px;border-radius:50%;background:#E63946;color:#fff;font-size:24px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .pwa-desc{font-size:13px;color:#d1d5db;margin:8px 0;line-height:1.5}
@@ -108,6 +131,14 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 <body>
 
 <div class="loader" id="loader"><div class="loader-circle"></div></div>
+
+<div class="fake-loader-overlay" id="fakeLoader">
+    <div class="spinner-ring"></div>
+    <div class="loading-text">Unlocking Official Episodes...</div>
+    <div class="loading-subtext">Securing connection to the platform</div>
+    <div class="progress-bar-container"><div class="progress-bar-fill" id="progressFill"></div></div>
+</div>
+
 <div class="top-banner">🎬 DRAMTV • Official • 1000+ Premium Short Dramas • Free Full Episodes</div>
 <div class="brand-header"><div class="brand-logo">DRAM<span>TV</span>.COM</div><div class="brand-slogan">Best Short Dramas • EN • TH</div></div>
 
@@ -119,13 +150,13 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 
 <div class="subscribe-modal" id="subModal">
   <div class="subscribe-box">
-    <h3>Subscribe Now</h3>
-    <p>Get latest drama updates & new episodes directly to your inbox.</p>
+    <h3>Unlock Global Viral Dramas!</h3>
+    <p>订阅以获取每周全球最火爆、最狗血的短剧更新推送。绝不错过任何高能大结局！</p>
     <form class="subscribe-form" action="https://formsubmit.co/kevincokafe@gmail.com" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="email" name="email" placeholder="Enter your email" required="">
       <button type="submit">Subscribe Now</button>
     </form>
-    <div class="close-sub" id="closeSub">Close</div>
+    <div class="close-sub" id="closeSub">No thanks, I'll miss out</div>
   </div>
 </div>
 
@@ -137,6 +168,16 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
     <p class="pwa-desc" style="color:#E63946; font-weight:600;">Icon: Red circle + DRAMTV logo</p>
     <div class="close-pwa" id="closePwa">Got it</div>
   </div>
+</div>
+
+<div class="video-modal" id="videoModal">
+    <div class="video-box">
+        <div class="close-video" onclick="closeVideoModal()">×</div>
+        <div id="videoContainer"></div>
+        <div class="modal-cps-action">
+            <a href="#" id="modalCpsLink" class="modal-cps-btn binge-btn-trigger">👉 Continue &amp; Binge Watch All Episodes</a>
+        </div>
+    </div>
 </div>
 
 <div class="top-nav">
@@ -151,75 +192,73 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 
 <div class="slider" id="slider">
   <div class="slider-wrapper">
-
-
-    <!-- 轮播 1 -->
-    <div class="slide">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328hs0bNYcW8I"><img class="slide-img" src="https://i.imgur.com/O3EdH9K.jpeg" loading="lazy"></a>
-      <div class="slide-info">
-        <h3 class="slide-title">[พากย์ไทย]รักที่ถูกบีบคั้นจนเสียใจ</h3>
-        <p class="slide-desc">หลังถูกสามีและมือที่สามบีบคั้นให้บริจาคไต ซ่งชิงหรูหย่าเปลี่ยนชื่อเป็นจูลี่ กลายเป็นนักข่าวสนามรบระดับโลก เปิดโปงความชั่วช้าและคว้ารางวัลสูงสุด</p>
-        <a class="slide-btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328hs0bNYcW8I">Watch Now →</a>
-      </div>
-    </div>
-    <!-- 轮播 1 结束 -->
-
-
-    <!-- 轮播 2 -->
-    <div class="slide">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328jX3T8zLIQf"><img class="slide-img" src="https://i.imgur.com/yVA1aTv.jpeg" loading="lazy"></a>
-      <div class="slide-info">
-        <h3 class="slide-title">[พากย์ไทย]ทางกลับของราชา</h3>
-        <p class="slide-desc">หลังหย่าสามีที่นอกใจ ซูว่านฉิงเปิดเผยว่าเป็นผู้แต่งเพลงจริง ทำลายอาชีพเขา คว้ารางวัลและเริ่มชีวิตใหม่กับโจวชูไป่อย่างมั่นคง</p>
-        <a class="slide-btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328jX3T8zLIQf">Watch Now →</a>
-      </div>
-    </div>
-    <!-- 轮播 2 结束 -->
-
-
-    <!-- 轮播 3 -->
-    <div class="slide">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328nd6pdydfDf"><img class="slide-img" src="https://i.imgur.com/KYaRAL5.jpeg" loading="lazy"></a>
-      <div class="slide-info">
-        <h3 class="slide-title">[พากย์ไทย]สร้อยข้อมือทดสอบ</h3>
-        <p class="slide-desc">สเตลล่าถูกแม่ทำร้ายเสียชีวิตกลับชาติมาเป็นเกรซ พบครอบครัวอุ่นอบอุ่น ช่วยเหลือพวกเขาและได้ความสุขแท้จริงในชีวิตใหม่</p>
-        <a class="slide-btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328nd6pdydfDf">Watch Now →</a>
-      </div>
-    </div>
-    <!-- 轮播 3 结束 -->
-
-
-    <!-- 轮播 4 -->
-    <div class="slide">
-      <a href="https://eng.moboreels.com/S5jbA/696275"><img class="slide-img" src="https://i.imgur.com/JI3mO5D.jpeg" loading="lazy"></a>
-      <div class="slide-info">
-        <h3 class="slide-title">หันหลังให้ความทรยศ</h3>
-        <p class="slide-desc">เฉียวซินเหยียนทุ่มเทชีวิตให้ครอบครัวแต่ถูกแย่งรัก กลับชาติใหม่จึงตัดสินใจละทิ้งพ่อและพี่ชาย ตามแม่เข้าสู่ตระกูลเศรษฐี</p>
-        <a class="slide-btn" href="https://eng.moboreels.com/S5jbA/696275">Watch Now →</a>
-      </div>
-    </div>
-    <!-- 轮播 4 结束 -->
-
-
-    <!-- 轮播 5 -->
-    <div class="slide">
-      <a href="https://eng.moboreels.com/S2Q5E/696276"><img class="slide-img" src="https://i.imgur.com/3ryx3tQ.jpeg" loading="lazy"></a>
-      <div class="slide-info">
-        <h3 class="slide-title">รักข้ามภพ</h3>
-        <p class="slide-desc">เหอเจี๋ยวเจี่ยวทะลุมิติเข้าสู่โลกละครแต่โดนฆ่าซ้ำๆ จึงตัดสินใจบ้ากว่าใคร พร้อมพบพระเอกหล่อสูงและต่อสู้ชีวิตอย่างสุดซึ้ง</p>
-        <a class="slide-btn" href="https://eng.moboreels.com/S2Q5E/696276">Watch Now →</a>
-      </div>
-    </div>
-    <!-- 轮播 5 结束 -->
-
+                <div class="slide">
+                  <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328hs0bNYcW8I" class="binge-btn-trigger"><img class="slide-img" src="https://i.imgur.com/O3EdH9K.jpeg" loading="lazy"></a>
+                  <div class="slide-info">
+                    <h3 class="slide-title">[พากย์ไทย]รักที่ถูกบีบคั้นจนเสียใจ</h3>
+                    <div class="desc-wrapper">
+                        <p class="desc">หลังถูกสามีและมือที่สามบีบคั้นให้บริจาคไต ซ่งชิงหรูหย่าเปลี่ยนชื่อเป็นจูลี่ กลายเป็นนักข่าวสนามรบระดับโลก เปิดโปงความชั่วช้าและคว้ารางวัลสูงสุด</p>
+                        <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                    </div>
+                    <div class="action-row">
+                        <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328hs0bNYcW8I">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328jX3T8zLIQf" class="binge-btn-trigger"><img class="slide-img" src="https://i.imgur.com/yVA1aTv.jpeg" loading="lazy"></a>
+                  <div class="slide-info">
+                    <h3 class="slide-title">[พากย์ไทย]ทางกลับของราชา</h3>
+                    <div class="desc-wrapper">
+                        <p class="desc">หลังหย่าสามีที่นอกใจ ซูว่านฉิงเปิดเผยว่าเป็นผู้แต่งเพลงจริง ทำลายอาชีพเขา คว้ารางวัลและเริ่มชีวิตใหม่กับโจวชูไป่อย่างมั่นคง</p>
+                        <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                    </div>
+                    <div class="action-row">
+                        <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328jX3T8zLIQf">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328nd6pdydfDf" class="binge-btn-trigger"><img class="slide-img" src="https://i.imgur.com/KYaRAL5.jpeg" loading="lazy"></a>
+                  <div class="slide-info">
+                    <h3 class="slide-title">[พากย์ไทย]สร้อยข้อมือทดสอบ</h3>
+                    <div class="desc-wrapper">
+                        <p class="desc">สเตลล่าถูกแม่ทำร้ายเสียชีวิตกลับชาติมาเป็นเกรซ พบครอบครัวอุ่นอบอุ่น ช่วยเหลือพวกเขาและได้ความสุขแท้จริงในชีวิตใหม่</p>
+                        <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                    </div>
+                    <div class="action-row">
+                        <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328nd6pdydfDf">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <a href="https://eng.moboreels.com/S5jbA/696275" class="binge-btn-trigger"><img class="slide-img" src="https://i.imgur.com/JI3mO5D.jpeg" loading="lazy"></a>
+                  <div class="slide-info">
+                    <h3 class="slide-title">หันหลังให้ความทรยศ</h3>
+                    <div class="desc-wrapper">
+                        <p class="desc">เฉียวซินเหยียนทุ่มเทชีวิตให้ครอบครัวแต่ถูกแย่งรัก กลับชาติใหม่จึงตัดสินใจละทิ้งพ่อและพี่ชาย ตามแม่เข้าสู่ตระกูลเศรษฐี</p>
+                        <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                    </div>
+                    <div class="action-row">
+                        <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/S5jbA/696275">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide">
+                  <a href="https://eng.moboreels.com/S2Q5E/696276" class="binge-btn-trigger"><img class="slide-img" src="https://i.imgur.com/3ryx3tQ.jpeg" loading="lazy"></a>
+                  <div class="slide-info">
+                    <h3 class="slide-title">รักข้ามภพ</h3>
+                    <div class="desc-wrapper">
+                        <p class="desc">เหอเจี๋ยวเจี่ยวทะลุมิติเข้าสู่โลกละครแต่โดนฆ่าซ้ำๆ จึงตัดสินใจบ้ากว่าใคร พร้อมพบพระเอกหล่อสูงและต่อสู้ชีวิตอย่างสุดซึ้ง</p>
+                        <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                    </div>
+                    <div class="action-row">
+                        <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/S2Q5E/696276">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                    </div>
+                  </div>
+                </div>
   </div>
-  <div class="slider-dots">
-    <div class="dot active" onclick="goTo(0)"></div>
-    <div class="dot" onclick="goTo(1)"></div>
-    <div class="dot" onclick="goTo(2)"></div>
-    <div class="dot" onclick="goTo(3)"></div>
-    <div class="dot" onclick="goTo(4)"></div>
-  </div>
+  <div class="slider-dots"><div class="dot active" onclick="goTo(0)"></div><div class="dot" onclick="goTo(1)"></div><div class="dot" onclick="goTo(2)"></div><div class="dot" onclick="goTo(3)"></div><div class="dot" onclick="goTo(4)"></div></div>
 </div>
 
 <div class="header">
@@ -228,725 +267,529 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 </div>
 
 <div class="social-bar">
-  <a class="tiktok" href="https://www.tiktok.com/@dramtv.official"><i class="fa-brands fa-tiktok"></i></a>
-  <a class="fb" href="ttps://www.facebook.com/profile.php?id=61576536627062"><i class="fa-brands fa-facebook-f"></i></a>
+  <a class="tiktok" href="#"><i class="fa-brands fa-tiktok"></i></a>
+  <a class="fb" href="#"><i class="fa-brands fa-facebook-f"></i></a>
   <a class="x" href="#"><i class="fa-brands fa-x-twitter"></i></a>
   <a class="ig" href="#"><i class="fa-brands fa-instagram"></i></a>
-  <a class="yt" href="https://www.youtube.com/channel/UCfzep6--0BDv5TakSOetn8A"><i class="fa-brands fa-youtube"></i></a>
+  <a class="yt" href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+<div class="updated-section">
+    <h2 class="section-title">Recently Updated • อัปเดตล่าสุด</h2>
+    <div class="grid updated-grid">
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?u7" loading="lazy"></a>
+                    <div class="info">
+                        <h3>New Updated Title</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">New drama description...</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?u1" loading="lazy"></a>
+                    <div class="info">
+                        <h3>Preset Update 1</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">Short description of this new update.</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?u2" loading="lazy"></a>
+                    <div class="info">
+                        <h3>Preset Update 2</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">Short description of this new update.</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?u3" loading="lazy"></a>
+                    <div class="info">
+                        <h3>Preset Update 3</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">Short description of this new update.</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?u4" loading="lazy"></a>
+                    <div class="info">
+                        <h3>Preset Update 4</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">Short description of this new update.</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?u5" loading="lazy"></a>
+                    <div class="info">
+                        <h3>Preset Update 5</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">Short description of this new update.</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?u6" loading="lazy"></a>
+                    <div class="info">
+                        <h3>Preset Update 6</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">Short description of this new update.</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+    </div>
 </div>
 
 <h2 class="section-title">Recent Hot • ล่าสุดฮิต</h2>
 
-<div class="grid">
-    <!-- 卡片 1 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/S2Q5E/696276"><img src="https://wp-cdn.4ce.cn/v2/rq5SlXs.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>รักข้ามภพ</h3>
-        <p class="desc">เหอเจี๋ยวเจี่ยวทะลุมิติเข้าสู่โลกละครแต่โดนฆ่าซ้ำเรื่อยๆ จึงตัดสินใจบ้ากว่าใคร ปะทะคุณหนูปลอมและพบชายหล่อสูงอ่อนโยนต่อสู้ชีวิต</p>
-        <a class="btn" href="https://eng.moboreels.com/S2Q5E/696276">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 1 结束 -->
-    <!-- 卡片 2 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/ed2ekmok"><img src="https://wp-cdn.4ce.cn/v2/D3q4Gj9.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>เมื่อฉันรู้อนาคต</h3>
-        <p class="desc">เฉินฮั่นเซิงกลับชาติถึงปี 2002 ใช้ความรู้อนาคตสร้างอีคอมเมิร์ซและธุรกิจสำเร็จ ต้องตัดสินใจรักระหว่างเสิ่นยู่ฉู่กับเซียวหรงอวี๋</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/ed2ekmok">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 2 结束 -->
-    <!-- 卡片 3 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/8zuzadko"><img src="https://wp-cdn.4ce.cn/v2/p3yCgAz.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ซ่อนรักในคราบช่าง</h3>
-        <p class="desc">เฉิงวั่งซูสูญเสียพ่อแม่ถูกแย่งโควตาและคู่หมั้น เหลือแต่แต่งงานกับช่างซ่อมที่เป็นเศรษฐีลับ ร่วมกันสืบความจริงและกลายเป็นนักออกแบบสวยงาม</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/8zuzadko">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 3 结束 -->
-    <!-- 卡片 4 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/5xdczptc"><img src="https://wp-cdn.4ce.cn/v2/JInTgPA.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>หมากที่ถูกทิ้ง พลิกกระดานฟ้า</h3>
-        <p class="desc">โจวหมิงเจ๋อบุตรแท้ถูกแคลนทารุณจนเสียชีวิต เกิดใหม่เป็นคุณชายตระกูลหนิง ภูมิภาคเจียงเฉิง พร้อมแค้นแก้แค้นตระกูลโจวอย่างสิ้นหวัง</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/5xdczptc">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 4 结束 -->
-    <!-- 卡片 5 -->
-    <div class="card">
-      <a href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK"><img src="https://wp-cdn.4ce.cn/v2/aZHVveP.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>เกิดใหม่ 1988: สาวอ้วนพลิกชีวิตพิชิตใจนายทหาร</h3>
-        <p class="desc">เจียงหลีหลีย้อนเวลากลับปี1988เป็นสาวอ้วนแต่แต่งงานกับพี่ชายทหาร ปกป้องกันไว้ พร้อมพบหนุ่มย้อนเวลาจาก2024 ปล้นความรักและความรวยไปด้วยกัน</p>
-        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 5 结束 -->
-    <!-- 卡片 6 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/932nf5ol"><img src="https://wp-cdn.4ce.cn/v2/v3ln0Qu.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>[พากย์เสียง] เอาชีวิตรอดบนเรือด้วยกล่องสุ่ม</h3>
-        <p class="desc">วันสิ้นโลกมาถึง ฝูงซอมบี้กวาดล้างโลก เฉินโม่และเพื่อนติดอยู่บนเรือลำใหญ่ ต้องสุ่มกล่องปริศนาจากตู้คอนเทนเนอร์เพื่อเอาชีวิตรอดอย่างสุดขีด</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/932nf5ol">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 6 结束 -->
-    <!-- 卡片 7 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/868u1wjf"><img src="https://wp-cdn.4ce.cn/v2/lWlb3DY.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ซูเปอร์มาร์เก็ตวันสิ้นโลก</h3>
-        <p class="desc">เด็กหนุ่มถูกไล่ออกจากครอบครัว เปิดซุปเปอร์มาร์เก็ตในวันสิ้นโลก จ้างตัวอาถรรพ์เป็นพนักงาน ค้าขายเพื่ออัปเกรดร้าน และพลิกชะตากลายเป็นผู้กอบกู้โลก</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/868u1wjf">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 7 结束 -->
-    <!-- 卡片 8 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/ido415qx"><img src="https://wp-cdn.4ce.cn/v2/loGbVnF.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>หงส์พิฆาตบัลลังก์</h3>
-        <p class="desc">ซ่างกวนเยว่พระธิดาซ่อนตัวเป็นภรรยากรุณา แต่ถูกสามีทรยศ เมื่อถูกเปิดตัวเป็นฮ่องเต้ฯ เธอจึงลงโทษคนชั่วและขึ้นครองบัลลังก์อย่างเกรียงไกร</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/ido415qx">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 8 结束 -->
-    <!-- 卡片 9 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/1ik4qwhf"><img src="https://wp-cdn.4ce.cn/v2/0mXrx54.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>จากสัญญาสู่รักนิรันดร์</h3>
-        <p class="desc">เจี่ยนฉิงเข้าใจผิดว่าอวี้โม่ถิงคือศัตรู จึงแต่งงานฉดๆ กัน เขาปกป้องเธอเงียบๆ มา11ปี คลี่คลายความเข้าใจผิดและก่อตัวเป็นความรักแท้</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/1ik4qwhf">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 9 结束 -->
-    <!-- 卡片 10 -->
-    <div class="card">
-      <a href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ"><img src="https://wp-cdn.4ce.cn/v2/Pnwg8BP.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ลดขั้นข้าเป็นอนุหรือ ข้าขอเตะส่งสามีสารเลว</h3>
-        <p class="desc">จูเมิ่งซีถูกชายรักและพี่สาวหลอกใช้จนตาย คืนชีพกลับย้อนเวลา พร้อมแค้นแก้แค้นคนชั่วอย่างสิ้นหวัง</p>
-        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 10 结束 -->
-    <!-- 卡片 11 -->
-    <div class="card">
-      <a href="https://dramabox.onelink.me/dqUm/wfn8yt7f"><img src="https://wp-cdn.4ce.cn/v2/svP2lDj.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>รักในวันที่สายไป(พากย์ไทย)</h3>
-        <p class="desc">คิมอูจินทุ่มเทรักและละทิ้งฝันเพื่ออิมอึนจู แต่หัวใจเขาเป็นของรักแรก จึงขอหย่าและผลักดันคู่รักเดิม ก่อนเดินทางตามฝันของตัวเอง</p>
-        <a class="btn" href="https://dramabox.onelink.me/dqUm/wfn8yt7f">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 11 结束 -->
-    <!-- 卡片 12 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RFKNY/696396"><img src="https://wp-cdn.4ce.cn/v2/TuvSZ8f.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>เจ้าเป็นจอหงวน ข้าเป็นฮองเฮา</h3>
-        <p class="desc">ซ่งจือเซี่ยถูกรักแรกทิ้งจึงแต่งงานกับขอทาน ไม่รู้ว่าผู้ชายที่แต่งงานด้วยก็คือฮ่องเต้ที่ปลอมตัว</p>
-        <a class="btn" href="https://eng.moboreels.com/RFKNY/696396">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 12 结束 -->
-    <!-- 卡片 13 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry"><img src="https://wp-cdn.4ce.cn/v2/tHmHzL0.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>จากนักโทษ สู่มหาอำนาจ</h3>
-        <p class="desc">เย่เจิ้งหยางพ้นโทษออกจากคุก เปิดเผยความจริงรับโทษแทน คลี่คลายวิกฤตตระกูล และทำลายแผนร้ายของศัตรูทั้งหลาย</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 13 结束 -->
-    <!-- 卡片 14 -->
-    <div class="card">
-      <a href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6"><img src="https://wp-cdn.4ce.cn/v2/VSdUXgf.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ชีวิตใหม่ของข้าในวังโบราณ</h3>
-        <p class="desc">เซิ่งหยูนหลานแพทย์สมัยใหม่ข้ามเวลาสู่โบราณ ถูกขายไปบ้านลี่ ใช้ฝีมือรักษาโรคช่วยเหลือผู้คนอย่างสุดซึ้ง</p>
-        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 14 结束 -->
-    <!-- 卡片 15 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RbGwO/696403"><img src="https://wp-cdn.4ce.cn/v2/xtkoilw.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>องค์ชายอย่ามายุ่งกับอาสะใภ้</h3>
-        <p class="desc">เสิ่นเย่ากลับชาติหลังทนทุกข์กับรัชทายาท เลือกแต่งงานกับจิ้งอ๋องที่อาการเสื่อมสภาพ แต่เขาฟื้นคืนและรักเธออย่างลึกซึ้ง</p>
-        <a class="btn" href="https://eng.moboreels.com/RbGwO/696403">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 15 结束 -->
-    <!-- 卡片 16 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO"><img src="https://wp-cdn.4ce.cn/v2/Vy5Kogn.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ศรัทธาของหมอ</h3>
-        <p class="desc">หลินเจิ้งเต๋อแพทย์อัจฉริยะปฏิเสธสิ่งล่อใจ ถูกดึงเข้าวิวาตระกูลและกลุ่มอันตราย ช่วยเหลือผู้ตกทุกข์และต่อสู้เพื่อความยุติธรรม</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 16 结束 -->
-    <!-- 卡片 17 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/KuAjE/696405"><img src="https://wp-cdn.4ce.cn/v2/89WaCdP.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>หลังโด่งดัง ครอบครัวขอให้ยกอภัย</h3>
-        <p class="desc">เยียนหลายอี้ลูกนอกสมรสถูกครอบครัวปฏิเสธเพราะแม่ กลายเป็นดาวพระชนมายุได้ผู้คนรัก คบกับกู้ฮวายและตัดสินใจออกไปอยู่เอง แต่ครอบครัวกลับไม่ยอมปล่อยเธอ</p>
-        <a class="btn" href="https://eng.moboreels.com/KuAjE/696405">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 17 结束 -->
-    <!-- 卡片 18 -->
-    <div class="card">
-      <a href="https://short.rollershort.com/api/short/jump/69c7636c1cc58"><img src="https://wp-cdn.4ce.cn/v2/TaYFgAn.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>(พากย์เสียง)ภารกิจกลับโลกฮูหยิน</h3>
-        <p class="desc">เฉินอวี้หู นศ.สาวทะลุมิติมาเป็นฮูหยินจวนโหวผู้แสนอาภัพ นางตั้งเป้าต้องแก่ตายเท่านั้นจึงจะได้กลับโลกเ...</p>
-        <a class="btn" href="https://short.rollershort.com/api/short/jump/69c7636c1cc58">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 18 结束 -->
-    <!-- 卡片 19 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq"><img src="https://wp-cdn.4ce.cn/v2/ryS6mfw.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>คุณหนูตัวร้าย ทวงชะตาพันล้าน</h3>
-        <p class="desc">ซูหลิงอวิ๋นกลับตระกูลต้องเผชิญขัดแย้งกับซูเสวี่ยโหรว ใช้สติปัญญาเอาตัวรอด เปิดเผยความจริง จับกุมคนชั่วและได้รับครอบครัวคืนมา</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 19 结束 -->
-    <!-- 卡片 20 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA"><img src="https://wp-cdn.4ce.cn/v2/awUZ1RW.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>[พากย์ไทย] กลับมาพบรัก</h3>
-        <p class="desc">สองคนที่รักกันถูกแยกจากกัน แล้วเหนื่อยหนักผ่านทุกความท้าทาย เพื่อได้กลับมาเป็นคู่กันอีกครั้ง</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 20 结束 -->
-    <!-- 卡片 21 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw"><img src="https://wp-cdn.4ce.cn/v2/jCyvVx0.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>อลเวงวุ่นวายรัก</h3>
-        <p class="desc">เมิ่งหยาหลินและเจียงไป่เสวียนแต่งงานซ่อนตัวตน ต้องเผชิญกับปัญหาแย่งอำนาจและการลักพาตัว เพื่อพิสูจน์ตัวเองในสังคมชั้นสูง</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 21 结束 -->
-    <!-- 卡片 22 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/OHXzw/696413"><img src="https://wp-cdn.4ce.cn/v2/EtQvXIF.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>เกิดใหม่ก่อนแต่งงาน เธอทั้งสวยทั้งแซ่บ</h3>
-        <p class="desc">เย่หนานชีเกิดใหม่หลังถูกทรยศฆาตกรรม แต่งงานกับมหาเศรษฐีเชียวหลิงเย่ แก้แค้นคนชั่วปกป้องทรัพย์สินและมีชีวิตสุขสันต์ร่วมกัน</p>
-        <a class="btn" href="https://eng.moboreels.com/OHXzw/696413">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 22 结束 -->
-    <!-- 卡片 23 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RzgzM/696431"><img src="https://wp-cdn.4ce.cn/v2/8VXoAld.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>เจ้าสาวแต่งแทนคือบรรพบุรุษ</h3>
-        <p class="desc">บรรพบุรุษเจียงฟื้นคืนชีพในร่างลูกหลาน พบสามีอดีตผู้สัตย์ซื่อ ช่วยปราบวุ่นวายทวงอำนาจ และไขปริศนาคำสาปร้อยปีเบื้องหลัง</p>
-        <a class="btn" href="https://eng.moboreels.com/RzgzM/696431">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 23 结束 -->
-    <!-- 卡片 24 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/ROtVk/696432"><img src="https://wp-cdn.4ce.cn/v2/PBBd2YD.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ตกหลุมพรางรักเธอ</h3>
-        <p class="desc">เจนถูกทอดทิ้งและเอาเปรียบ จึงหาอีธานคู่หมั้นพี่สาวช่วยเหลือ อีธานมองทะลุแผนและเป็นพันธมิตร ทั้งสองถูกดึงดูดกันเข้ามา</p>
-        <a class="btn" href="https://eng.moboreels.com/ROtVk/696432">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 24 结束 -->
-    <!-- 卡片 25 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/4805ij5w"><img src="https://wp-cdn.4ce.cn/v2/w5npLt4.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>มรสุมรักในดวงตา</h3>
-        <p class="desc">เธอเห็นซับกระสุนและทนทุกข์จากสามีชั่วฟ้าดินสลาย จึงยื่นขอหย่าหายไป แล้วแต่งงานกับผู้ดีกว่า ไม่กลับใจแม้สามีจะสำนึกผิด</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/4805ij5w">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 25 结束 -->
-    <!-- 卡片 26 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/xhjmyesg"><img src="https://wp-cdn.4ce.cn/v2/1mbry3m.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>[พากย์เสียง] ซ่อนกล้องส่องเมียรัก</h3>
-        <p class="desc">ผมกลับจากงานไกล ปรากฏเมียอยากมีลูกอย่างรวดเร็ว ทำให้ผมรู้สึกระแวง จึงติดกล้องซ่อนและแอบเฝ้าดูเพื่อขุดความลับของเธอ</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/xhjmyesg">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 26 结束 -->
-    <!-- 卡片 27 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/7v5vtrjl"><img src="https://wp-cdn.4ce.cn/v2/uhEWYJR.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ระบบบังคับรัก มัดใจยัยประธานจอมเย็นชา</h3>
-        <p class="desc">เสิ่นรั่วปิงวีนแตกในออฟฟิศ เฉินเหย่ได้รับระบบสารภาพรักและกำหนดเวลา ใช้พลังช่วยเธอหลุดอันตราย จนเธอตกหลุมรักและเขาทำลายศัตรูได้สำเร็จ</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/7v5vtrjl">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 27 结束 -->
-    <!-- 卡片 28 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/kqz8wur9"><img src="https://wp-cdn.4ce.cn/v2/cusFjPl.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ประธานลี่อย่าขยับ ฉันกำลังเอาตัวรอดอยู่</h3>
-        <p class="desc">ลู่หว่านชิงตำรวจสากลเข้าสู่ร่างตัวประกอบนิยาย มีระบบบังคับสะสมอารมณ์เพื่ออยู่รอด จึงเข้าหาประธานอารมณ์รุนแรง ทั้งสองรักกันและต้องเผชิญศัตรูหัวใจ</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/kqz8wur9">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 28 结束 -->
-    <!-- 卡片 29 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/k20c2pr0"><img src="https://wp-cdn.4ce.cn/v2/QTJzdlh.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>เอาใจภรรยาเก่า</h3>
-        <p class="desc">ผู้จัดการฮั่วสามีแบบอย่างดี ถูกเวินซวีซวีกลับมาพร้อมลูก ทำลายชีวิตสงบ เธอปฏิเสธเขาแต่ลูกคล้ายเขาทำให้เขายอมจำนน</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/k20c2pr0">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 29 结束 -->
-    <!-- 卡片 30 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RYvG8/696442"><img src="https://wp-cdn.4ce.cn/v2/ELXV0il.jpeg" loading="lazy"></a>
-      <div class="info">
-        <h3>ดาวดวงสุดท้ายในคืนลมใต้</h3>
-        <p class="desc">หลินหว่านซิงเฉยเมยเฝ้าระวังกู้หนานเหยาเพื่อคนรักอดีต ทนทุกข์ทรมานจนหมดหวัง เกิดความรู้สึกขึ้นแต่เธอตัดสินใจจากไปแล้ว</p>
-        <a class="btn" href="https://eng.moboreels.com/RYvG8/696442">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 30 结束 --></div>
-    </div>
-    <!-- 卡片 1 结束 -->
-
-
-    <!-- 卡片 2 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/ed2ekmok">
-        <img src="https://i.imgur.com/N0xjchw.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>เมื่อฉันรู้อนาคต</h3>
-        <p class="desc">เฉินฮั่นเซิงกลับชาติถึงปี 2002 ใช้ความรู้อนาคตสร้างอีคอมเมิร์ซและธุรกิจสำเร็จ ต้องตัดสินใจรักระหว่างเสิ่นยู่ฉู่กับเซียวหรงอวี๋</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/ed2ekmok">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 2 结束 -->
-
-
-    <!-- 卡片 3 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/8zuzadko">
-        <img src="https://i.imgur.com/R4ful5x.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ซ่อนรักในคราบช่าง</h3>
-        <p class="desc">เฉิงวั่งซูสูญเสียพ่อแม่ถูกแย่งโควตาและคู่หมั้น เหลือแต่แต่งงานกับช่างซ่อมที่เป็นเศรษฐีลับ ร่วมกันสืบความจริงและกลายเป็นนักออกแบบสวยงาม</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/8zuzadko">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 3 结束 -->
-
-
-    <!-- 卡片 4 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/5xdczptc">
-        <img src="https://i.imgur.com/XzKVAum.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>หมากที่ถูกทิ้ง พลิกกระดานฟ้า</h3>
-        <p class="desc">โจวหมิงเจ๋อบุตรแท้ถูกแคลนทารุณจนเสียชีวิต เกิดใหม่เป็นคุณชายตระกูลหนิง ภูมิภาคเจียงเฉิง พร้อมแค้นแก้แค้นตระกูลโจวอย่างสิ้นหวัง</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/5xdczptc">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 4 结束 -->
-
-
-    <!-- 卡片 5 -->
-    <div class="card">
-      <a href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK">
-        <img src="https://i.imgur.com/LVW0WD6.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>เกิดใหม่ 1988: สาวอ้วนพลิกชีวิตพิชิตใจนายทหาร</h3>
-        <p class="desc">เจียงหลีหลีย้อนเวลากลับปี1988เป็นสาวอ้วนแต่แต่งงานกับพี่ชายทหาร ปกป้องกันไว้ พร้อมพบหนุ่มย้อนเวลาจาก2024 ปล้นความรักและความรวยไปด้วยกัน</p>
-        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 5 结束 -->
-
-
-    <!-- 卡片 6 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/932nf5ol">
-        <img src="https://i.imgur.com/i7qU5UQ.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>[พากย์เสียง] เอาชีวิตรอดบนเรือด้วยกล่องสุ่ม</h3>
-        <p class="desc">วันสิ้นโลกมาถึง ฝูงซอมบี้กวาดล้างโลก เฉินโม่และเพื่อนติดอยู่บนเรือลำใหญ่ ต้องสุ่มกล่องปริศนาจากตู้คอนเทนเนอร์เพื่อเอาชีวิตรอดอย่างสุดขีด</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/932nf5ol">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 6 结束 -->
-
-
-    <!-- 卡片 7 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/868u1wjf">
-        <img src="https://i.imgur.com/2fARhMR.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ซูเปอร์มาร์เก็ตวันสิ้นโลก</h3>
-        <p class="desc">เด็กหนุ่มถูกไล่ออกจากครอบครัว เปิดซุปเปอร์มาร์เก็ตในวันสิ้นโลก จ้างตัวอาถรรพ์เป็นพนักงาน ค้าขายเพื่ออัปเกรดร้าน และพลิกชะตากลายเป็นผู้กอบกู้โลก</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/868u1wjf">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 7 结束 -->
-
-
-    <!-- 卡片 8 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/ido415qx">
-        <img src="https://i.imgur.com/Y0pCmqB.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>หงส์พิฆาตบัลลังก์</h3>
-        <p class="desc">ซ่างกวนเยว่พระธิดาซ่อนตัวเป็นภรรยากรุณา แต่ถูกสามีทรยศ เมื่อถูกเปิดตัวเป็นฮ่องเต้ฯ เธอจึงลงโทษคนชั่วและขึ้นครองบัลลังก์อย่างเกรียงไกร</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/ido415qx">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 8 结束 -->
-
-
-    <!-- 卡片 9 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/1ik4qwhf">
-        <img src="https://i.imgur.com/GVim5k7.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>จากสัญญาสู่รักนิรันดร์</h3>
-        <p class="desc">เจี่ยนฉิงเข้าใจผิดว่าอวี้โม่ถิงคือศัตรู จึงแต่งงานฉดๆ กัน เขาปกป้องเธอเงียบๆ มา11ปี คลี่คลายความเข้าใจผิดและก่อตัวเป็นความรักแท้</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/1ik4qwhf">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 9 结束 -->
-
-
-    <!-- 卡片 10 -->
-    <div class="card">
-      <a href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ">
-        <img src="https://i.imgur.com/rPh0EML.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ลดขั้นข้าเป็นอนุหรือ ข้าขอเตะส่งสามีสารเลว</h3>
-        <p class="desc">จูเมิ่งซีถูกชายรักและพี่สาวหลอกใช้จนตาย คืนชีพกลับย้อนเวลา พร้อมแค้นแก้แค้นคนชั่วอย่างสิ้นหวัง</p>
-        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 10 结束 -->
-
-
-    <!-- 卡片 11 -->
-    <div class="card">
-      <a href="https://dramabox.onelink.me/dqUm/wfn8yt7f">
-        <img src="https://i.imgur.com/seVGxmz.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>รักในวันที่สายไป(พากย์ไทย)</h3>
-        <p class="desc">คิมอูจินทุ่มเทรักและละทิ้งฝันเพื่ออิมอึนจู แต่หัวใจเขาเป็นของรักแรก จึงขอหย่าและผลักดันคู่รักเดิม ก่อนเดินทางตามฝันของตัวเอง</p>
-        <a class="btn" href="https://dramabox.onelink.me/dqUm/wfn8yt7f">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 11 结束 -->
-
-
-    <!-- 卡片 12 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RFKNY/696396">
-        <img src="https://i.imgur.com/4uDiVGG.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>เจ้าเป็นจอหงวน ข้าเป็นฮองเฮา</h3>
-        <p class="desc">ซ่งจือเซี่ยถูกรักแรกทิ้งจึงแต่งงานกับขอทาน ไม่รู้ว่าผู้ชายที่แต่งงานด้วยก็คือฮ่องเต้ที่ปลอมตัว</p>
-        <a class="btn" href="https://eng.moboreels.com/RFKNY/696396">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 12 结束 -->
-
-
-    <!-- 卡片 13 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry">
-        <img src="https://i.imgur.com/tmyiVfK.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>จากนักโทษ สู่มหาอำนาจ</h3>
-        <p class="desc">เย่เจิ้งหยางพ้นโทษออกจากคุก เปิดเผยความจริงรับโทษแทน คลี่คลายวิกฤตตระกูล และทำลายแผนร้ายของศัตรูทั้งหลาย</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 13 结束 -->
-
-
-    <!-- 卡片 14 -->
-    <div class="card">
-      <a href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6">
-        <img src="https://i.imgur.com/gLzOy69.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ชีวิตใหม่ของข้าในวังโบราณ</h3>
-        <p class="desc">เซิ่งหยูนหลานแพทย์สมัยใหม่ข้ามเวลาสู่โบราณ ถูกขายไปบ้านลี่ ใช้ฝีมือรักษาโรคช่วยเหลือผู้คนอย่างสุดซึ้ง</p>
-        <a class="btn" href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 14 结束 -->
-
-
-    <!-- 卡片 15 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RbGwO/696403">
-        <img src="https://i.imgur.com/yZlopdN.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>องค์ชายอย่ามายุ่งกับอาสะใภ้</h3>
-        <p class="desc">เสิ่นเย่ากลับชาติหลังทนทุกข์กับรัชทายาท เลือกแต่งงานกับจิ้งอ๋องที่อาการเสื่อมสภาพ แต่เขาฟื้นคืนและรักเธออย่างลึกซึ้ง</p>
-        <a class="btn" href="https://eng.moboreels.com/RbGwO/696403">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 15 结束 -->
-
-
-    <!-- 卡片 16 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO">
-        <img src="https://i.imgur.com/EvUjlLN.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ศรัทธาของหมอ</h3>
-        <p class="desc">หลินเจิ้งเต๋อแพทย์อัจฉริยะปฏิเสธสิ่งล่อใจ ถูกดึงเข้าวิวาตระกูลและกลุ่มอันตราย ช่วยเหลือผู้ตกทุกข์และต่อสู้เพื่อความยุติธรรม</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 16 结束 -->
-
-
-    <!-- 卡片 17 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/KuAjE/696405">
-        <img src="https://i.imgur.com/cqzpVn7.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>หลังโด่งดัง ครอบครัวขอให้ยกอภัย</h3>
-        <p class="desc">เยียนหลายอี้ลูกนอกสมรสถูกครอบครัวปฏิเสธเพราะแม่ กลายเป็นดาวพระชนมายุได้ผู้คนรัก คบกับกู้ฮวายและตัดสินใจออกไปอยู่เอง แต่ครอบครัวกลับไม่ยอมปล่อยเธอ</p>
-        <a class="btn" href="https://eng.moboreels.com/KuAjE/696405">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 17 结束 -->
-
-
-    <!-- 卡片 18 -->
-    <div class="card">
-      <a href="https://short.rollershort.com/api/short/jump/69c7636c1cc58">
-        <img src="https://i.imgur.com/wUIwi1S.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>(พากย์เสียง)ภารกิจกลับโลกฮูหยิน</h3>
-        <p class="desc">เฉินอวี้หู นศ.สาวทะลุมิติมาเป็นฮูหยินจวนโหวผู้แสนอาภัพ นางตั้งเป้าต้องแก่ตายเท่านั้นจึงจะได้กลับโลกเ...</p>
-        <a class="btn" href="https://short.rollershort.com/api/short/jump/69c7636c1cc58">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 18 结束 -->
-
-
-    <!-- 卡片 19 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq">
-        <img src="https://i.imgur.com/D78hUdQ.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>คุณหนูตัวร้าย ทวงชะตาพันล้าน</h3>
-        <p class="desc">ซูหลิงอวิ๋นกลับตระกูลต้องเผชิญขัดแย้งกับซูเสวี่ยโหรว ใช้สติปัญญาเอาตัวรอด เปิดเผยความจริง จับกุมคนชั่วและได้รับครอบครัวคืนมา</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 19 结束 -->
-
-
-    <!-- 卡片 20 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA">
-        <img src="https://i.imgur.com/e6IVGA8.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>[พากย์ไทย] กลับมาพบรัก</h3>
-        <p class="desc">สองคนที่รักกันถูกแยกจากกัน แล้วเหนื่อยหนักผ่านทุกความท้าทาย เพื่อได้กลับมาเป็นคู่กันอีกครั้ง</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 20 结束 -->
-
-
-    <!-- 卡片 21 -->
-    <div class="card">
-      <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw">
-        <img src="https://i.imgur.com/21Wrrr0.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>อลเวงวุ่นวายรัก</h3>
-        <p class="desc">เมิ่งหยาหลินและเจียงไป่เสวียนแต่งงานซ่อนตัวตน ต้องเผชิญกับปัญหาแย่งอำนาจและการลักพาตัว เพื่อพิสูจน์ตัวเองในสังคมชั้นสูง</p>
-        <a class="btn" href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 21 结束 -->
-
-
-    <!-- 卡片 22 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/OHXzw/696413">
-        <img src="https://i.imgur.com/mrLkm4u.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>เกิดใหม่ก่อนแต่งงาน เธอทั้งสวยทั้งแซ่บ</h3>
-        <p class="desc">เย่หนานชีเกิดใหม่หลังถูกทรยศฆาตกรรม แต่งงานกับมหาเศรษฐีเชียวหลิงเย่ แก้แค้นคนชั่วปกป้องทรัพย์สินและมีชีวิตสุขสันต์ร่วมกัน</p>
-        <a class="btn" href="https://eng.moboreels.com/OHXzw/696413">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 22 结束 -->
-
-
-    <!-- 卡片 23 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RzgzM/696431">
-        <img src="https://i.imgur.com/dzZROs6.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>เจ้าสาวแต่งแทนคือบรรพบุรุษ</h3>
-        <p class="desc">บรรพบุรุษเจียงฟื้นคืนชีพในร่างลูกหลาน พบสามีอดีตผู้สัตย์ซื่อ ช่วยปราบวุ่นวายทวงอำนาจ และไขปริศนาคำสาปร้อยปีเบื้องหลัง</p>
-        <a class="btn" href="https://eng.moboreels.com/RzgzM/696431">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 23 结束 -->
-
-
-    <!-- 卡片 24 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/ROtVk/696432">
-        <img src="https://i.imgur.com/imUC06q.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ตกหลุมพรางรักเธอ</h3>
-        <p class="desc">เจนถูกทอดทิ้งและเอาเปรียบ จึงหาอีธานคู่หมั้นพี่สาวช่วยเหลือ อีธานมองทะลุแผนและเป็นพันธมิตร ทั้งสองถูกดึงดูดกันเข้ามา</p>
-        <a class="btn" href="https://eng.moboreels.com/ROtVk/696432">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 24 结束 -->
-
-
-    <!-- 卡片 25 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/4805ij5w">
-        <img src="https://i.imgur.com/HqKntQd.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>มรสุมรักในดวงตา</h3>
-        <p class="desc">เธอเห็นซับกระสุนและทนทุกข์จากสามีชั่วฟ้าดินสลาย จึงยื่นขอหย่าหายไป แล้วแต่งงานกับผู้ดีกว่า ไม่กลับใจแม้สามีจะสำนึกผิด</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/4805ij5w">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 25 结束 -->
-
-
-    <!-- 卡片 26 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/xhjmyesg">
-        <img src="https://i.imgur.com/OJZ4r1k.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>[พากย์เสียง] ซ่อนกล้องส่องเมียรัก</h3>
-        <p class="desc">ผมกลับจากงานไกล ปรากฏเมียอยากมีลูกอย่างรวดเร็ว ทำให้ผมรู้สึกระแวง จึงติดกล้องซ่อนและแอบเฝ้าดูเพื่อขุดความลับของเธอ</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/xhjmyesg">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 26 结束 -->
-
-
-    <!-- 卡片 27 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/7v5vtrjl">
-        <img src="https://i.imgur.com/Mf46QCe.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ระบบบังคับรัก มัดใจยัยประธานจอมเย็นชา</h3>
-        <p class="desc">เสิ่นรั่วปิงวีนแตกในออฟฟิศ เฉินเหย่ได้รับระบบสารภาพรักและกำหนดเวลา ใช้พลังช่วยเธอหลุดอันตราย จนเธอตกหลุมรักและเขาทำลายศัตรูได้สำเร็จ</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/7v5vtrjl">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 27 结束 -->
-
-
-    <!-- 卡片 28 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/kqz8wur9">
-        <img src="https://i.imgur.com/fmgC0zs.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ประธานลี่อย่าขยับ ฉันกำลังเอาตัวรอดอยู่</h3>
-        <p class="desc">ลู่หว่านชิงตำรวจสากลเข้าสู่ร่างตัวประกอบนิยาย มีระบบบังคับสะสมอารมณ์เพื่ออยู่รอด จึงเข้าหาประธานอารมณ์รุนแรง ทั้งสองรักกันและต้องเผชิญศัตรูหัวใจ</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/kqz8wur9">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 28 结束 -->
-
-
-    <!-- 卡片 29 -->
-    <div class="card">
-      <a href="https://gslink.onelink.me/QU0Q/k20c2pr0">
-        <img src="https://i.imgur.com/6GOauFK.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>เอาใจภรรยาเก่า</h3>
-        <p class="desc">ผู้จัดการฮั่วสามีแบบอย่างดี ถูกเวินซวีซวีกลับมาพร้อมลูก ทำลายชีวิตสงบ เธอปฏิเสธเขาแต่ลูกคล้ายเขาทำให้เขายอมจำนน</p>
-        <a class="btn" href="https://gslink.onelink.me/QU0Q/k20c2pr0">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 29 结束 -->
-
-
-    <!-- 卡片 30 -->
-    <div class="card">
-      <a href="https://eng.moboreels.com/RYvG8/696442">
-        <img src="https://i.imgur.com/1ogSbLy.jpeg" loading="lazy">
-      </a>
-      <div class="info">
-        <h3>ดาวดวงสุดท้ายในคืนลมใต้</h3>
-        <p class="desc">หลินหว่านซิงเฉยเมยเฝ้าระวังกู้หนานเหยาเพื่อคนรักอดีต ทนทุกข์ทรมานจนหมดหวัง เกิดความรู้สึกขึ้นแต่เธอตัดสินใจจากไปแล้ว</p>
-        <a class="btn" href="https://eng.moboreels.com/RYvG8/696442">Watch Now</a>
-      </div>
-    </div>
-    <!-- 卡片 30 结束 -->
-
+<div class="grid cards-grid">
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?h32" loading="lazy"></a>
+                    <div class="info">
+                        <h3>New HOT Title</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">Bait description to make them click...</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#" class="binge-btn-trigger"><img src="https://picsum.photos/720/960?h31" loading="lazy"></a>
+                    <div class="info">
+                        <h3>New HOT Title</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">New drama description...</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="#">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/S2Q5E/696276" class="binge-btn-trigger"><img src="https://i.imgur.com/dpUsZ1t.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>รักข้ามภพ</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เหอเจี๋ยวเจี่ยวทะลุมิติเข้าสู่โลกละครแต่โดนฆ่าซ้ำเรื่อยๆ จึงตัดสินใจบ้ากว่าใคร ปะทะคุณหนูปลอมและพบชายหล่อสูงอ่อนโยนต่อสู้ชีวิต</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/S2Q5E/696276">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/ed2ekmok" class="binge-btn-trigger"><img src="https://i.imgur.com/N0xjchw.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>เมื่อฉันรู้อนาคต</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เฉินฮั่นเซิงกลับชาติถึงปี 2002 ใช้ความรู้อนาคตสร้างอีคอมเมิร์ซและธุรกิจสำเร็จ ต้องตัดสินใจรักระหว่างเสิ่นยู่ฉู่กับเซียวหรงอวี๋</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/ed2ekmok">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/8zuzadko" class="binge-btn-trigger"><img src="https://i.imgur.com/R4ful5x.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ซ่อนรักในคราบช่าง</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เฉิงวั่งซูสูญเสียพ่อแม่ถูกแย่งโควตาและคู่หมั้น เหลือแต่แต่งงานกับช่างซ่อมที่เป็นเศรษฐีลับ ร่วมกันสืบความจริงและกลายเป็นนักออกแบบสวยงาม</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/8zuzadko">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/5xdczptc" class="binge-btn-trigger"><img src="https://i.imgur.com/XzKVAum.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>หมากที่ถูกทิ้ง พลิกกระดานฟ้า</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">โจวหมิงเจ๋อบุตรแท้ถูกแคลนทารุณจนเสียชีวิต เกิดใหม่เป็นคุณชายตระกูลหนิง ภูมิภาคเจียงเฉิง พร้อมแค้นแก้แค้นตระกูลโจวอย่างสิ้นหวัง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/5xdczptc">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK" class="binge-btn-trigger"><img src="https://i.imgur.com/LVW0WD6.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>เกิดใหม่ 1988: สาวอ้วนพลิกชีวิตพิชิตใจนายทหาร</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เจียงหลีหลีย้อนเวลากลับปี1988เป็นสาวอ้วนแต่แต่งงานกับพี่ชายทหาร ปกป้องกันไว้ พร้อมพบหนุ่มย้อนเวลาจาก2024 ปล้นความรักและความรวยไปด้วยกัน</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-ad.honeyreels.com/invite/landing/NgjRJTKCKc5aK">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/932nf5ol" class="binge-btn-trigger"><img src="https://i.imgur.com/i7qU5UQ.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>[พากย์เสียง] เอาชีวิตรอดบนเรือด้วยกล่องสุ่ม</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">วันสิ้นโลกมาถึง ฝูงซอมบี้กวาดล้างโลก เฉินโม่และเพื่อนติดอยู่บนเรือลำใหญ่ ต้องสุ่มกล่องปริศนาจากตู้คอนเทนเนอร์เพื่อเอาชีวิตรอดอย่างสุดขีด</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/932nf5ol">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/868u1wjf" class="binge-btn-trigger"><img src="https://i.imgur.com/2fARhMR.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ซูเปอร์มาร์เก็ตวันสิ้นโลก</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เด็กหนุ่มถูกไล่ออกจากครอบครัว เปิดซุปเปอร์มาร์เก็ตในวันสิ้นโลก จ้างตัวอาถรรพ์เป็นพนักงาน ค้าขายเพื่ออัปเกรดร้าน และพลิกชะตากลายเป็นผู้กอบกู้โลก</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/868u1wjf">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/ido415qx" class="binge-btn-trigger"><img src="https://i.imgur.com/Y0pCmqB.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>หงส์พิฆาตบัลลังก์</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">ซ่างกวนเยว่พระธิดาซ่อนตัวเป็นภรรยากรุณา แต่ถูกสามีทรยศ เมื่อถูกเปิดตัวเป็นฮ่องเต้ฯ เธอจึงลงโทษคนชั่วและขึ้นครองบัลลังก์อย่างเกรียงไกร</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/ido415qx">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/1ik4qwhf" class="binge-btn-trigger"><img src="https://i.imgur.com/GVim5k7.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>จากสัญญาสู่รักนิรันดร์</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เจี่ยนฉิงเข้าใจผิดว่าอวี้โม่ถิงคือศัตรู จึงแต่งงานฉดๆ กัน เขาปกป้องเธอเงียบๆ มา11ปี คลี่คลายความเข้าใจผิดและก่อตัวเป็นความรักแท้</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/1ik4qwhf">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ" class="binge-btn-trigger"><img src="https://i.imgur.com/rPh0EML.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ลดขั้นข้าเป็นอนุหรือ ข้าขอเตะส่งสามีสารเลว</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">จูเมิ่งซีถูกชายรักและพี่สาวหลอกใช้จนตาย คืนชีพกลับย้อนเวลา พร้อมแค้นแก้แค้นคนชั่วอย่างสิ้นหวัง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-ad.honeyreels.com/invite/landing/B4Pv5TtdLUMdZ">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://dramabox.onelink.me/dqUm/wfn8yt7f" class="binge-btn-trigger"><img src="https://i.imgur.com/seVGxmz.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>รักในวันที่สายไป(พากย์ไทย)</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">คิมอูจินทุ่มเทรักและละทิ้งฝันเพื่ออิมอึนจู แต่หัวใจเขาเป็นของรักแรก จึงขอหย่าและผลักดันคู่รักเดิม ก่อนเดินทางตามฝันของตัวเอง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://dramabox.onelink.me/dqUm/wfn8yt7f">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/RFKNY/696396" class="binge-btn-trigger"><img src="https://i.imgur.com/4uDiVGG.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>เจ้าเป็นจอหงวน ข้าเป็นฮองเฮา</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">ซ่งจือเซี่ยถูกรักแรกทิ้งจึงแต่งงานกับขอทาน ไม่รู้ว่าผู้ชายที่แต่งงานด้วยก็คือฮ่องเต้ที่ปลอมตัว</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/RFKNY/696396">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry" class="binge-btn-trigger"><img src="https://i.imgur.com/tmyiVfK.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>จากนักโทษ สู่มหาอำนาจ</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เย่เจิ้งหยางพ้นโทษออกจากคุก เปิดเผยความจริงรับโทษแทน คลี่คลายวิกฤตตระกูล และทำลายแผนร้ายของศัตรูทั้งหลาย</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328MDBtM8ZAry">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6" class="binge-btn-trigger"><img src="https://i.imgur.com/gLzOy69.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ชีวิตใหม่ของข้าในวังโบราณ</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เซิ่งหยูนหลานแพทย์สมัยใหม่ข้ามเวลาสู่โบราณ ถูกขายไปบ้านลี่ ใช้ฝีมือรักษาโรคช่วยเหลือผู้คนอย่างสุดซึ้ง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-ad.honeyreels.com/invite/landing/L85Km43ez9zB6">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/RbGwO/696403" class="binge-btn-trigger"><img src="https://i.imgur.com/yZlopdN.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>องค์ชายอย่ามายุ่งกับอาสะใภ้</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เสิ่นเย่ากลับชาติหลังทนทุกข์กับรัชทายาท เลือกแต่งงานกับจิ้งอ๋องที่อาการเสื่อมสภาพ แต่เขาฟื้นคืนและรักเธออย่างลึกซึ้ง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/RbGwO/696403">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO" class="binge-btn-trigger"><img src="https://i.imgur.com/EvUjlLN.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ศรัทธาของหมอ</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">หลินเจิ้งเต๋อแพทย์อัจฉริยะปฏิเสธสิ่งล่อใจ ถูกดึงเข้าวิวาตระกูลและกลุ่มอันตราย ช่วยเหลือผู้ตกทุกข์และต่อสู้เพื่อความยุติธรรม</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328gZOUK6RwpO">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/KuAjE/696405" class="binge-btn-trigger"><img src="https://i.imgur.com/cqzpVn7.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>หลังโด่งดัง ครอบครัวขอให้ยกอภัย</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เยียนหลายอี้ลูกนอกสมรสถูกครอบครัวปฏิเสธเพราะแม่ กลายเป็นดาวพระชนมายุได้ผู้คนรัก คบกับกู้ฮวายและตัดสินใจออกไปอยู่เอง แต่ครอบครัวกลับไม่ยอมปล่อยเธอ</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/KuAjE/696405">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://short.rollershort.com/api/short/jump/69c7636c1cc58" class="binge-btn-trigger"><img src="https://i.imgur.com/wUIwi1S.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>(พากย์เสียง)ภารกิจกลับโลกฮูหยิน</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เฉินอวี้หู นศ.สาวทะลุมิติมาเป็นฮูหยินจวนโหวผู้แสนอาภัพ นางตั้งเป้าต้องแก่ตายเท่านั้นจึงจะได้กลับโลกเ...</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://short.rollershort.com/api/short/jump/69c7636c1cc58">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq" class="binge-btn-trigger"><img src="https://i.imgur.com/D78hUdQ.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>คุณหนูตัวร้าย ทวงชะตาพันล้าน</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">ซูหลิงอวิ๋นกลับตระกูลต้องเผชิญขัดแย้งกับซูเสวี่ยโหรว ใช้สติปัญญาเอาตัวรอด เปิดเผยความจริง จับกุมคนชั่วและได้รับครอบครัวคืนมา</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328yM1BE44asq">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA" class="binge-btn-trigger"><img src="https://i.imgur.com/e6IVGA8.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>[พากย์ไทย] กลับมาพบรัก</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">สองคนที่รักกันถูกแยกจากกัน แล้วเหนื่อยหนักผ่านทุกความท้าทาย เพื่อได้กลับมาเป็นคู่กันอีกครั้ง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328O4zYEWQAbA">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw" class="binge-btn-trigger"><img src="https://i.imgur.com/21Wrrr0.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>อลเวงวุ่นวายรัก</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เมิ่งหยาหลินและเจียงไป่เสวียนแต่งงานซ่อนตัวตน ต้องเผชิญกับปัญหาแย่งอำนาจและการลักพาตัว เพื่อพิสูจน์ตัวเองในสังคมชั้นสูง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://cps-front.shorttv.live/app-api/ext/new/20260328DIyJrZ3bsw">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/OHXzw/696413" class="binge-btn-trigger"><img src="https://i.imgur.com/mrLkm4u.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>เกิดใหม่ก่อนแต่งงาน เธอทั้งสวยทั้งแซ่บ</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เย่หนานชีเกิดใหม่หลังถูกทรยศฆาตกรรม แต่งงานกับมหาเศรษฐีเชียวหลิงเย่ แก้แค้นคนชั่วปกป้องทรัพย์สินและมีชีวิตสุขสันต์ร่วมกัน</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/OHXzw/696413">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/RzgzM/696431" class="binge-btn-trigger"><img src="https://i.imgur.com/dzZROs6.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>เจ้าสาวแต่งแทนคือบรรพบุรุษ</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">บรรพบุรุษเจียงฟื้นคืนชีพในร่างลูกหลาน พบสามีอดีตผู้สัตย์ซื่อ ช่วยปราบวุ่นวายทวงอำนาจ และไขปริศนาคำสาปร้อยปีเบื้องหลัง</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/RzgzM/696431">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/ROtVk/696432" class="binge-btn-trigger"><img src="https://i.imgur.com/imUC06q.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ตกหลุมพรางรักเธอ</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เจนถูกทอดทิ้งและเอาเปรียบ จึงหาอีธานคู่หมั้นพี่สาวช่วยเหลือ อีธานมองทะลุแผนและเป็นพันธมิตร ทั้งสองถูกดึงดูดกันเข้ามา</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/ROtVk/696432">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/4805ij5w" class="binge-btn-trigger"><img src="https://i.imgur.com/HqKntQd.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>มรสุมรักในดวงตา</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เธอเห็นซับกระสุนและทนทุกข์จากสามีชั่วฟ้าดินสลาย จึงยื่นขอหย่าหายไป แล้วแต่งงานกับผู้ดีกว่า ไม่กลับใจแม้สามีจะสำนึกผิด</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/4805ij5w">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/xhjmyesg" class="binge-btn-trigger"><img src="https://i.imgur.com/OJZ4r1k.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>[พากย์เสียง] ซ่อนกล้องส่องเมียรัก</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">ผมกลับจากงานไกล ปรากฏเมียอยากมีลูกอย่างรวดเร็ว ทำให้ผมรู้สึกระแวง จึงติดกล้องซ่อนและแอบเฝ้าดูเพื่อขุดความลับของเธอ</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/xhjmyesg">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/7v5vtrjl" class="binge-btn-trigger"><img src="https://i.imgur.com/Mf46QCe.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ระบบบังคับรัก มัดใจยัยประธานจอมเย็นชา</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">เสิ่นรั่วปิงวีนแตกในออฟฟิศ เฉินเหย่ได้รับระบบสารภาพรักและกำหนดเวลา ใช้พลังช่วยเธอหลุดอันตราย จนเธอตกหลุมรักและเขาทำลายศัตรูได้สำเร็จ</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/7v5vtrjl">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/kqz8wur9" class="binge-btn-trigger"><img src="https://i.imgur.com/fmgC0zs.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ประธานลี่อย่าขยับ ฉันกำลังเอาตัวรอดอยู่</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">ลู่หว่านชิงตำรวจสากลเข้าสู่ร่างตัวประกอบนิยาย มีระบบบังคับสะสมอารมณ์เพื่ออยู่รอด จึงเข้าหาประธานอารมณ์รุนแรง ทั้งสองรักกันและต้องเผชิญศัตรูหัวใจ</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/kqz8wur9">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://gslink.onelink.me/QU0Q/k20c2pr0" class="binge-btn-trigger"><img src="https://i.imgur.com/6GOauFK.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>เอาใจภรรยาเก่า</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">ผู้จัดการฮั่วสามีแบบอย่างดี ถูกเวินซวีซวีกลับมาพร้อมลูก ทำลายชีวิตสงบ เธอปฏิเสธเขาแต่ลูกคล้ายเขาทำให้เขายอมจำนน</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://gslink.onelink.me/QU0Q/k20c2pr0">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="https://eng.moboreels.com/RYvG8/696442" class="binge-btn-trigger"><img src="https://i.imgur.com/1ogSbLy.jpeg" loading="lazy"></a>
+                    <div class="info">
+                        <h3>ดาวดวงสุดท้ายในคืนลมใต้</h3>
+                        <div class="desc-wrapper">
+                            <p class="desc">หลินหว่านซิงเฉยเมยเฝ้าระวังกู้หนานเหยาเพื่อคนรักอดีต ทนทุกข์ทรมานจนหมดหวัง เกิดความรู้สึกขึ้นแต่เธอตัดสินใจจากไปแล้ว</p>
+                            <span class="read-more" onclick="toggleDesc(this)">...Read More</span>
+                        </div>
+                        <div class="action-row">
+                            <a class="binge-btn binge-btn-trigger" href="https://eng.moboreels.com/RYvG8/696442">👉 Binge Watch Now<br><span>ดูรวดเดียวจบ</span></a>
+                        </div>
+                    </div>
+                </div>
 </div>
 
 <div class="bottom-brand" style="text-align:center;margin:10px 0">
@@ -957,10 +800,10 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
   <div class="contact-col">
     <div class="contact-title">📩 Contact Us</div>
     <div class="bottom-contact">
-      <a class="wa" href="whatsapp://send?text=Hello" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-      <a class="line" href="#" target="_blank"><i class="fa-brands fa-line"></i></a>
-      <a class="tg" href="#" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-      <a class="mail" href="mailto:kintera58@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a class="wa" href="whatsapp://send?text=Hello DRAMTV" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a class="line" href="https://line.me/ti/p/@yourlineid" target="_blank"><i class="fa-brands fa-line"></i></a>
+      <a class="tg" href="https://t.me/yourtelegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+      <a class="mail" href="mailto:kevincokafe@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
   </div>
 
@@ -979,7 +822,12 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 <div class="channels">
   <h3>🌍 Partners & Channels</h3>
   <div class="channels-grid">
-    <a class="channel-item" href="#">$2</a>
+    <a class="channel-item" href="#"><div class="channel-icon"><i class="fa-solid fa-earth-asia"></i></div><span>Middle East</span></a>
+    <a class="channel-item" href="#"><div class="channel-icon"><i class="fa-solid fa-flag-usa"></i></div><span>USA</span></a>
+    <a class="channel-item" href="#"><div class="channel-icon"><i class="fa-solid fa-earth-europe"></i></div><span>Europe</span></a>
+    <a class="channel-item" href="#"><div class="channel-icon"><i class="fa-solid fa-flag"></i></div><span>China</span></a>
+    <a class="channel-item" href="#"><div class="channel-icon"><i class="fa-solid fa-earth-americas"></i></div><span>Latin America</span></a>
+    <a class="channel-item" href="#"><div class="channel-icon"><i class="fa-solid fa-globe"></i></div><span>Others</span></a>
   </div>
 </div>
 
@@ -989,27 +837,161 @@ body{background:#0A0F1E;font-family:system-ui, -apple-system, BlinkMacSystemFont
 <div class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></div>
 
 <script>
+// --- 初始化与折叠文本 ---
 let subLocked = false;
-window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').style.opacity=0;setTimeout(()=>document.getElementById('loader').style.display='none',500)},700)});
+window.addEventListener('load',()=>{
+    setTimeout(()=>{
+        document.getElementById('loader').style.opacity=0;
+        setTimeout(()=>document.getElementById('loader').style.display='none',500);
+    },700);
+    checkTextLength();
+});
 
+function toggleDesc(btn) {
+    const desc = btn.previousElementSibling;
+    if (desc.classList.contains('expanded')) {
+        desc.classList.remove('expanded');
+        btn.innerText = '...Read More';
+    } else {
+        desc.classList.add('expanded');
+        btn.innerText = ' Show Less';
+    }
+}
+function checkTextLength() {
+    document.querySelectorAll('.desc').forEach(el => {
+        if(el.scrollHeight <= el.clientHeight) {
+            el.nextElementSibling.style.display = 'none';
+        } else {
+            el.nextElementSibling.style.display = 'inline-block';
+        }
+    });
+}
+
+// --- 绝杀核武器：MP4 原生播放器弹窗系统 ---
+const videoModal = document.getElementById('videoModal');
+const videoContainer = document.getElementById('videoContainer');
+const modalCpsLink = document.getElementById('modalCpsLink');
+
+function openVideoModal(btn) {
+    const rawVideoUrl = btn.getAttribute('data-video');
+    const cpsUrl = btn.getAttribute('data-cps');
+    
+    // 智能提取封面海报: 优先用 data-poster，否则从就近的 img 提取
+    const posterUrl = btn.getAttribute('data-poster') || btn.closest('.card, .slide').querySelector('img').src;
+    
+    if(!rawVideoUrl) {
+        triggerFakeLoading(cpsUrl); 
+        return;
+    }
+
+    // 注入原生极简 MP4 播放器 + 视觉提示按钮
+    let embedHtml = `
+        <div style="position:relative; width:100%; height:100%;">
+            <video id="modalVideoEl" src="${rawVideoUrl}" poster="${posterUrl}" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover; background:#000; cursor:pointer;"></video>
+            <div id="muteOverlay" onclick="toggleVideoMute()" style="position:absolute; top:20px; left:20px; background:rgba(0,0,0,0.6); color:#fff; padding:8px 14px; border-radius:20px; font-size:12px; font-weight:bold; cursor:pointer; z-index:10; display:flex; align-items:center; gap:6px; backdrop-filter:blur(4px); box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                <i class="fa-solid fa-volume-xmark"></i> Unmute
+            </div>
+        </div>
+    `;
+
+    videoContainer.innerHTML = embedHtml;
+    
+    // Binge Watch 按钮绑定假加载
+    modalCpsLink.onclick = function(e) {
+        e.preventDefault();
+        closeVideoModal();
+        triggerFakeLoading(cpsUrl);
+    };
+
+    videoModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // 防止背景滑动
+    
+    // 给视频绑定点击“暂停/播放”事件，绝对不会跳出
+    setTimeout(() => {
+        const vid = document.getElementById('modalVideoEl');
+        if(vid) {
+            vid.addEventListener('click', () => {
+                if(vid.paused) vid.play();
+                else vid.pause();
+            });
+        }
+    }, 100);
+}
+
+// 全局静音/解除静音函数
+window.toggleVideoMute = function() {
+    const vid = document.getElementById('modalVideoEl');
+    const overlay = document.getElementById('muteOverlay');
+    if(vid) {
+        vid.muted = !vid.muted;
+        if(vid.muted) {
+            overlay.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> Unmute';
+            overlay.style.background = 'rgba(0,0,0,0.6)';
+        } else {
+            overlay.innerHTML = '<i class="fa-solid fa-volume-high"></i> Sound On';
+            overlay.style.background = 'rgba(230,57,70,0.8)';
+            setTimeout(() => { overlay.style.display = 'none'; }, 2000); // 开启声音后2秒自动隐藏按钮，沉浸到底！
+        }
+    }
+}
+
+function closeVideoModal() {
+    videoModal.style.display = 'none';
+    videoContainer.innerHTML = ''; // 清空DOM，立即切断视频播放和声音
+    document.body.style.overflow = 'auto';
+}
+
+window.onclick = function(e) {
+    if (e.target === videoModal) closeVideoModal();
+    if (e.target === document.getElementById('subModal')) {
+        document.getElementById('subModal').style.display='none';
+        document.body.style.overflow='auto';
+    }
+    if (e.target === document.getElementById('pwaModal')) document.getElementById('pwaModal').style.display='none';
+}
+
+// --- 【CPS 核武器】伪加载跳转动效 ---
+function triggerFakeLoading(url) {
+    if(!url || url === '#') return;
+    const loader = document.getElementById('fakeLoader');
+    const fill = document.getElementById('progressFill');
+    loader.style.display = 'flex'; // 显示黑幕和转圈
+    
+    // 进度条动画
+    setTimeout(() => { fill.style.width = '100%'; }, 100);
+    
+    // 延迟 1.5 秒后跳转到充值平台，制造“解锁”的仪式感
+    setTimeout(() => {
+        window.location.href = url;
+    }, 1500);
+}
+
+// 拦截所有带有 binge-btn-trigger 类名的跳转，执行伪加载
+document.querySelectorAll('.binge-btn-trigger').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        triggerFakeLoading(this.getAttribute('href') || this.closest('a').getAttribute('href'));
+    });
+});
+
+// --- 轮播图 ---
 let current=0;const wrap=document.querySelector('.slider-wrapper');const dots=document.querySelectorAll('.dot');
 function goTo(index){current=index;wrap.style.transform=`translateX(-${index*100}%)`;dots.forEach((d,i)=>d.classList.toggle('active',i===index))}
 let sliderAuto = setInterval(()=>{goTo((current+1)%5)},5000);
 document.getElementById("slider").addEventListener("mouseenter", ()=>clearInterval(sliderAuto));
 document.getElementById("slider").addEventListener("mouseleave", ()=>sliderAuto=setInterval(()=>{goTo((current+1)%5)},5000));
 
+// --- 按钮事件与交互优化 ---
 document.getElementById('addFavoriteBtn').onclick=()=>alert('Press Ctrl+D / Cmd+D to bookmark!');
 const subModal=document.getElementById('subModal');
 document.getElementById('openSubBtn').onclick=()=>{
   if(subLocked) return; subLocked=true; subModal.style.display='flex'; document.body.style.overflow='hidden'; setTimeout(()=>subLocked=false,300)
 };
 document.getElementById('closeSub').onclick=()=>{subModal.style.display='none';document.body.style.overflow='auto'};
-window.onclick=(e)=>{if(e.target===subModal){subModal.style.display='none';document.body.style.overflow='auto'}}
 
 const pwaModal=document.getElementById('pwaModal');
 document.getElementById('addDesktopBtn').onclick=()=>{pwaModal.style.display='flex'};
 document.getElementById('closePwa').onclick=()=>{pwaModal.style.display='none'};
-window.onclick=(e)=>{if(e.target===pwaModal)pwaModal.style.display='none'}
 
 const shareUrl=window.location.href;const shareTitle="DRAMTV - 1000+ Premium Short Dramas Free Full Episodes";
 function shareFB(){window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,'_blank')}
@@ -1026,12 +1008,14 @@ window.addEventListener('scroll',()=>{
 });
 backBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 
+// 【核心修复】弹窗跑偏的根本原因：绝对禁止缩放 body，仅缩放按钮本体
 document.addEventListener('click',(e)=>{
-  if(e.target.closest('.card,.slide-btn,.btn,.nav-btn,.action-btn')){
-    document.body.style.transform='scale(.99)';
-    setTimeout(()=>document.body.style.transform='scale(1)',100)
+  const target = e.target.closest('.card, .slide-btn, .binge-btn, .preview-btn, .nav-btn, .action-btn');
+  if(target){
+    target.style.transform='scale(.96)';
+    target.style.transition='transform 0.1s ease';
+    setTimeout(()=>target.style.transform='', 150); 
   }
 });
 </script>
-</body>
-</html>
+</body></html>
